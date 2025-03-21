@@ -1,0 +1,42 @@
+{
+    "zh": {
+        "homepage": {
+            "title": "首頁",
+            "link": "index.html"
+        },
+        "UEC_Textbooks": {
+            "title": "獨中課本",
+            "link": "UEC_Textbooks.html"
+        }
+    },
+    "zh-simp": {
+        "homepage": {
+            "title": "首页",
+            "link": "index.html"
+        },
+        "UEC_Textbooks": {
+            "title": "独中课本",
+            "link": "UEC_Textbooks.html"
+        }
+    },
+    "ms-my": {
+        "homepage": {
+            "title": "Laman Utama",
+            "link": "index.html"
+        },
+        "UEC_Textbooks": {
+            "title": "Buku Teks UEC",
+            "link": "UEC_Textbooks.html"
+        }
+    },
+    "en-gb": {
+        "homepage": {
+            "title": "Homepage",
+            "link": "index.html"
+        },
+        "UEC_Textbooks": {
+            "title": "UEC Textbooks",
+            "link": "UEC_Textbooks.html"
+        }
+    }
+}

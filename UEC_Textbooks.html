@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbooks</title>
+    <style>
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #f1f1f1;
+            color: black;
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            z-index: 20;
+        }
+        .navbar.dark-mode {
+            background-color: #333333;
+            color: #fefdfc;
+        }
+        
+        .navbar .hamburger {
+            cursor: pointer;
+            margin-right: 20px;
+            margin-left: 10px;
+            background-color: transparent;
+            border: none;
+            z-index: 20;
+        }
+        .hamburger img {
+            transition: all 0.3s;
+        }
+
+        .navbar #webpage-title {
+            visibility: hidden;
+            display: flex;
+        }
+
+        .navbar-title {
+            position: relative;
+            z-index: 20;
+        }
+        
+        .navbar .site-preferences {
+            margin-left: auto;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .navbar .site-preferences button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin-left: 10px;
+            outline: none;
+        }
+        .navbar .site-preferences img {
+            cursor: pointer;
+            background-color: transparent;
+            width: 2.8em;
+            height: 2.8em;
+            border: none;
+        }
+        .language-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            right: 10px;
+            top: calc(100% + 10px);
+        }
+        .language-dropdown a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .language-dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+        .language-dropdown.dark-mode {
+            background-color: #333333;
+        }
+        .language-dropdown.dark-mode a {
+            color: white;
+        }
+        .language-dropdown.dark-mode a:hover {
+            background-color: black;
+        }
+
+        .sidebar {
+            width: 231px;
+            height: 100%;
+            background-color: #f4f4f4;
+            position: fixed;
+            top: 0;
+            visibility: hidden;
+            margin-left: -271px;
+            transition: margin-left 0.3s;
+            padding: 20px;
+            z-index: 19;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .sidebar a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #c8ae81;
+        }
+        .sidebar.dark-mode {
+            background-color: #3c3c3c;
+        }
+        .sidebar.dark-mode a {
+            color: white;
+        }
+        .sidebar.dark-mode a:hover {
+            background-color: black;
+        }
+        .sidebar.sidebar-active {
+            visibility: visible;
+            margin-left: 0px;
+        }
+
+        .popbtnblock {
+            display: relative;
+            margin-top: 80px;
+            margin-left: 25px;
+            transition: margin-left 0.3s;
+        }
+        .popbtnblock.sidebar-active {
+            margin-left: 285px;
+        }
+        .popbtn {
+            background-color: #f1f1f1;
+            color: black;
+            border: solid;
+            border-color: lightblue;
+            border-radius: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .popbtn:hover {
+            background-color: #e0e0e0;
+        }
+        .popbtn.dark-mode {
+            background-color: #333333;
+            color: white;
+        }
+        .popbtn.dark-mode:hover {
+            background-color: #444444;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 23;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .popup-content {
+            background-color: #fefdfc;
+            margin: 7% auto 7% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 71%;
+            height: 61%;
+            border-radius: 15px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .popup-content.dark-mode {
+            background-color: #333333;
+            color: white;
+            border: 1px solid #888;
+        }
+        .popup-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #0cc;
+            padding-bottom: 10px;
+        }
+        .popup-title.dark-mode {
+            border-bottom: 1px solid #ccc;
+        }
+        .popup-title h1 {
+            margin: 0;
+        }
+        .popup-close {
+            background: none;
+            border: none;
+            color: #aaa;
+            float: right;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .popup-close:hover,
+        .popup-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .popup-close.dark-mode {
+            color: white;
+        }
+        .popup-close.dark-mode:hover,
+        .popup-close.dark-mode:focus {
+            color: #ccc;
+        }
+        .popup-content p {
+            margin: 0;
+            padding: 10px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 25px;
+            transition: margin-left 0.3s;
+        }
+
+        .dropdown.sidebar-active {
+            margin-left: 285px;
+        }
+        .dropbtn {
+            background-color: #f1f1f1;
+            color: black;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .dropbtn:hover {
+            background-color: #e0e0e0;
+        }
+        .dropbtn.dark-mode {
+            background-color: #333333;
+            color: white;
+        }
+        .dropbtn.dark-mode:hover {
+            background-color: #444444;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            min-width: 160px;
+            max-height: 240px;
+            overflow-y: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content.dark-mode {
+            background-color: #333333;
+        }
+
+        .dropdown-content label {
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content label:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown-content.dark-mode label {
+            color: white;
+        }
+        .dropdown-content.dark-mode label:hover {
+            background-color: black;
+        }
+        .show {
+            display: block;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            margin-left: 0;
+            transition: margin-left 0.3s;
+            padding: 20px;
+        }
+        .content.sidebar-active {
+            margin-left: 260px;
+        }
+        .book {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            width: 169px;
+            border: 1px solid #ccc;
+            border-radius: 19px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            vertical-align: top;
+        }
+        .book img {
+            width: 170px;
+            height: 240px;
+        }
+        .book-info {
+            gap: 0;
+            text-align: center;
+            padding-top: 8px;
+            margin-top: 8px;
+        }
+        .book-info-2nd-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .book-info p {
+            margin: 0;
+            border-top: 1px solid #ccc;
+            padding: 5px;
+        }
+        .book-info p:first-child {
+            border-left: none;
+        }
+        .book-info p:nth-child(2) {
+            border-left: 1px solid #ccc;
+        }
+        .book-info-2nd-row p {
+            padding-top: 0.5em;
+        }
+        .bookshelf {
+            margin-bottom: 20px;
+        }
+        .bookshelf-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            margin-left: 5px;
+        }
+        .bookshelf .book {
+            flex: 1 1 169px;
+            max-width: 169px;
+            display: flex;
+            flex-direction: column;
+        }
+        .book-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .book-row .book {
+            flex: 1 1 169px;
+            max-width: 169px;
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button id="hamburger-menu" class="hamburger"><img src="./img/hamburger-icon-light.svg" alt="Menu" width="36em" height="36em"></button>
+        <h2 id="navbar-title" style="z-index: 20;">獨中課本</h2>
+        <div class="site-preferences">
+            <h3 id="webpage-title">獨中課本</h3>
+            <button id="modeButton" onclick="toggleMode()">
+                <img src="./img/sun-light.svg" alt="Dark Mode">
+            </button>
+            <button id="languageButton" onclick="languageOption()">
+                <img id="language-icon" src="./img/languages-light.svg" alt="Languages" width="36em" height="36em">
+            </button>
+            <div id="language-dropdown" class="language-dropdown">
+                <a href="#" onclick="changeLanguage('ms-my')">Bahasa Melayu</a>
+                <a href="#" onclick="changeLanguage('en-gb')">English</a>
+                <a href="#" onclick="changeLanguage('zh')">正體中文</a>
+                <a href="#" onclick="changeLanguage('zh-simp')">简体中文</a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div style="margin-top: 11px;">
+
+        </div>
+    </div>
+    <br>
+    <div class="popbtnblock">
+        <button class="popbtn" id="disclaimer-button" onclick="popup('disclaimer')"></button>
+        <button class="popbtn" id="copyright-button" onclick="popup('copyright')"></button>
+        <button class="popbtn" id="manual-button" onclick="popup('manual')"></button>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <div class="popup-title">
+                    <div></div>
+                    <h1></h1>
+                    <button class="popup-close" onclick="closePopup()">&times;</button>
+                </div>
+                <p id="popup-content" style="overflow-y: auto; height:80%">Don't ban me from sitting UEC pls</p>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <br>
+        <button class="dropbtn" id="form-button">年級</button>
+        <div class="dropdown-content" id="form-dropdown">
+            <label><input type="checkbox" id="select-all-forms"> </label><br>
+            <label id="dropdown-jm"><input type="checkbox" name="form" value="jm"> </label><br>
+            <label id="dropdown-jm1"><input type="checkbox" name="form" value="jm1"> </label><br>
+            <label id="dropdown-jm2"><input type="checkbox" name="form" value="jm2"> </label><br>
+            <label id="dropdown-jm3"><input type="checkbox" name="form" value="jm3"> </label><br>
+            <label id="dropdown-sm"><input type="checkbox" name="form" value="sm"> </label><br>
+            <label id="dropdown-sm1"><input type="checkbox" name="form" value="sm1"> </label><br>
+            <label id="dropdown-sm2"><input type="checkbox" name="form" value="sm2"> </label><br>
+            <label id="dropdown-sm3"><input type="checkbox" name="form" value="sm3"> </label><br>
+        </div>
+        <button class="dropbtn" id="subject-button">科目</button>
+        <div class="dropdown-content" id="subject-dropdown">
+            <label><input type="checkbox" id="select-all-subjects"> </label><br>
+            <label id="malay"><input type="checkbox" name="subject" value="malay"> </label><br>
+            <label id="english"><input type="checkbox" name="subject" value="english"> </label><br>
+            <label id="chinese"><input type="checkbox" name="subject" value="chinese"> Chinese</label><br>
+            <label id="maths"><input type="checkbox" name="subject" value="maths"> Mathematics</label><br>
+            <label id="science"><input type="checkbox" name="subject" value="science"> Science</label><br>
+            <label id="history"><input type="checkbox" name="subject" value="history"> History</label><br>
+            <label id="geography"><input type="checkbox" name="subject" value="geography"> Geography</label><br>
+            <label id="arts"><input type="checkbox" name="subject" value="arts"> Arts</label><br>
+            <label id="music"><input type="checkbox" name="subject" value="music"> Music</label><br>
+            <label id="it"><input type="checkbox" name="subject" value="it"> </label><br>
+            <label id="economics"><input type="checkbox" name="subject" value="economics"> Economics</label><br>
+            <label id="accounting"><input type="checkbox" name="subject" value="accounting"> Accounting</label><br>
+            <label id="business"><input type="checkbox" name="subject" value="business"> Business Studies</label><br>
+            <label id="biology"><input type="checkbox" name="subject" value="biology"> Biology</label><br>
+            <label id="chemistry"><input type="checkbox" name="subject" value="chemistry"> Chemistry</label><br>
+            <label id="physics"><input type="checkbox" name="subject" value="physics"> Physics</label><br>
+            <label id="advmaths"><input type="checkbox" name="subject" value="advmaths"> Advanced Mathematics</label><br>
+            <label id="bookkeeping"><input type="checkbox" name="subject" value="bookkeeping"> bookkeeping</label><br>
+        </div>
+    </div>
+    <div class="content" id="books-content">
+        
+    </div>
+
+    <script>
+        let booksData;
+        let booksContent;
+        let booksResponse;
+        let contentJSON = {};
+        let webpageJSON = {};
+
+        document.querySelector('.hamburger').addEventListener('click', async function() {
+            const sidebar = document.querySelector('.sidebar');
+            const content = contentJSON[page_language];
+            sidebar.classList.toggle('sidebar-active');
+            if (sidebar.classList.contains('sidebar-active')) {
+                sidebar.style.visibility = 'visible';
+                setTimeout(() => {
+                    if (!sidebar.classList.contains('sidebar-active'))
+                    sidebar.style.visibility = 'hidden';
+                }, 2000);
+            }
+            document.querySelector('.content').classList.toggle('sidebar-active');
+            document.querySelector('.dropdown').classList.toggle('sidebar-active');
+            document.querySelector('.popbtnblock').classList.toggle('sidebar-active');
+            const hamburgerIcon = document.querySelector('.hamburger img');
+            if (sidebar.classList.contains('sidebar-active')) {
+                if (sidebar.classList.contains('dark-mode')) {
+                    hamburgerIcon.src = './img/hamburger-viewing-dark.svg';
+                } else {
+                    hamburgerIcon.src = './img/hamburger-viewing-light.svg';
+                }
+                document.querySelector('#webpage-title').style.visibility = 'visible';
+                document.querySelector('#navbar-title').textContent = content.navbarTitleSidebarActive;
+            } else {
+                if (sidebar.classList.contains('dark-mode')) {
+                    hamburgerIcon.src = './img/hamburger-icon-dark.svg';
+                } else {
+                    hamburgerIcon.src = './img/hamburger-icon-light.svg';
+                }
+                document.querySelector('#webpage-title').style.visibility = 'hidden';
+                document.querySelector('#navbar-title').textContent = content.navbarTitle;
+            }
+        });
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        document.querySelectorAll('.dropbtn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.nextElementSibling.classList.toggle('show');
+            });
+        });
+
+        document.getElementById('select-all-forms').addEventListener('change', function() {
+            const checkboxes = document.querySelectorAll('#form-dropdown input[type="checkbox"]');
+            checkboxes.forEach(checkbox => checkbox.checked = this.checked);
+            loadBooks(page_language, contentJSON[page_language]);
+        });
+        const formCheckboxes = document.querySelectorAll('#form-dropdown input[name="form"]');
+        formCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const allChecked = Array.from(formCheckboxes).every(cb => cb.checked);
+                document.getElementById('select-all-forms').checked = allChecked;
+                loadBooks(page_language, contentJSON[page_language]);
+            });
+        });
+
+        document.getElementById('select-all-subjects').addEventListener('change', function() {
+            const checkboxes = document.querySelectorAll('#subject-dropdown input[type="checkbox"]');
+            checkboxes.forEach(checkbox => checkbox.checked = this.checked);
+            loadBooks(page_language, contentJSON[page_language]);
+        });
+        const subjectCheckboxes = document.querySelectorAll('#subject-dropdown input[name="subject"]');
+        subjectCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const allChecked = Array.from(subjectCheckboxes).every(cb => cb.checked);
+                document.getElementById('select-all-subjects').checked = allChecked;
+                loadBooks(page_language, contentJSON[page_language]);
+            });
+        });
+
+        window.onclick = function(event) {
+            ["form", "subject", "language"].forEach(type => {
+                const dropdown = document.getElementById(`${type}-dropdown`);
+                if (!event.target.id.startsWith(type) && !dropdown.contains(event.target)) {
+                    document.getElementById(`${type}-dropdown`).classList.remove('show');
+                }
+            });
+        }
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+        let mode = "light";
+        if (document.cookie.includes('mode')) {
+            mode = getCookie('mode');
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            mode = "dark";
+        } else {
+            document.cookie = "mode=light;";
+        }
+
+        let page_language = "zh";
+        if (document.cookie.includes('language')) {
+            page_language = getCookie('language');
+        }
+
+        function changeLanguage(language) {
+            document.cookie = `language=${language}; expires=Fri, 31 Dec 9999 23:59:59 GMT; sameSite=Strict;`;
+            if (language === page_language) return;
+            page_language = language;
+            loadPageWithLanguage(language);
+        }
+
+        function loadBooks(language, content) {
+            booksContent.innerHTML = '';
+
+            const selectedForms = Array.from(document.querySelectorAll('#form-dropdown input[name="form"]:checked')).map(cb => cb.value);
+            const selectedSubjects = Array.from(document.querySelectorAll('#subject-dropdown input[name="subject"]:checked')).map(cb => cb.value);
+
+            const supersededBookshelf = document.createElement('div');
+            supersededBookshelf.className = 'bookshelf';
+            const supersededBookshelfTitle = document.createElement('div');
+            supersededBookshelfTitle.className = 'bookshelf-title';
+            supersededBookshelfTitle.textContent = 'Superseded Books';
+            supersededBookshelf.appendChild(supersededBookshelfTitle);
+            const supersededBookRow = document.createElement('div');
+            supersededBookRow.className = 'book-row';
+
+            booksData.forEach(grade => {
+                if (selectedForms.includes(grade.grade_id)) {
+                    const bookshelf = document.createElement('div');
+                    bookshelf.className = 'bookshelf';
+                    const bookshelfTitle = document.createElement('div');
+                    bookshelfTitle.className = 'bookshelf-title';
+                    bookshelfTitle.textContent = grade.grade[page_language];
+                    bookshelf.appendChild(bookshelfTitle);
+                    const bookRow = document.createElement('div');
+                    bookRow.className = 'book-row';
+                    grade.items.forEach(book => {
+                        if (selectedSubjects.includes(book.subject)) {
+                            const bookDiv = document.createElement('div');
+                            bookDiv.className = 'book';
+                            bookDiv.innerHTML = `
+                                <img src="covers/${book.id}.jpg" alt="${book.title[language]} Cover Page">
+                                <div class="book-info">
+                                    <div class="book-title-container">
+                                        <p class="book-title">${book.title[language]}</p>
+                                    </div>
+                                    <div class="book-info-2nd-row" style="grid-column: span 2;">
+                                    <p>
+                                        ${book.page}
+                                        <br>
+                                        <span style="font-size: 0.8em;margin-top:0.2em;">${content.pages}</span>
+                                    </p>
+                                    <p>
+                                        ${(book.size / (1024 * 1024)).toFixed(2) != 0 ? (book.size / (1024 * 1024)).toFixed(2) : "--"}
+                                        <span style="font-size: 0.8em">MB<br>${content.size}</span>
+                                    </p>
+                                    </div>
+                                </div>
+                            `;
+                            if (book.dl_link) {
+                                bookDiv.style.cursor = 'pointer';
+                                bookDiv.addEventListener('click', () => {
+                                    window.open(book.dl_link, '_blank');
+                                });
+                            }
+                    
+                            if (book.status === 'superseded') {
+                                supersededBookRow.appendChild(bookDiv);
+                            } else {
+                                bookRow.appendChild(bookDiv);
+                            }
+                        }
+
+                    });
+                    if (bookRow.children.length > 0) {
+                        bookshelf.appendChild(bookRow);
+                        booksContent.appendChild(bookshelf);
+                    }
+                }
+            });
+            if (supersededBookRow.children.length > 0) {
+                supersededBookshelf.appendChild(supersededBookRow);
+                booksContent.appendChild(supersededBookshelf);
+            }
+
+            adjustbookTitleContainersHeight();
+            window.scrollTo(0, window.scrollY);
+        }
+
+        async function loadPageWithLanguage(language) {
+            const scrollPosition = window.scrollY;
+            const content = contentJSON[language];
+            document.title = content.title;
+            document.getElementById('navbar-title').textContent = content.navbarTitle;
+            document.getElementById('webpage-title').textContent = content.navbarTitle;
+            
+            const sidebar = document.querySelector('.sidebar > div');
+            sidebar.innerHTML = '<h1 style="visibility: hidden;">2025</h1>';
+            const languageLinks = webpageJSON[language];
+            for (const key in languageLinks) {
+                if (languageLinks.hasOwnProperty(key)) {
+                    const linkData = languageLinks[key];
+                    const a = document.createElement('a');
+                    a.href = linkData.link;
+                    a.textContent = linkData.title;
+                    sidebar.appendChild(a);
+                }
+            }
+
+            document.getElementById('disclaimer-button').textContent = content.disclaimer;
+            document.getElementById('copyright-button').textContent = content.copyright;
+            document.getElementById('manual-button').textContent = content.manual;
+
+            document.getElementById('form-button').textContent = content.formButton;
+            document.getElementById('subject-button').textContent = content.subjectButton;
+
+            document.getElementById('select-all-forms').nextSibling.textContent = content.selectAll;
+            document.getElementById('select-all-subjects').nextSibling.textContent = content.selectAll;
+
+            document.getElementById('dropdown-jm').childNodes[1].textContent = content.grade.jm;
+            document.getElementById('dropdown-jm1').childNodes[1].textContent = content.grade.jm1;
+            document.getElementById('dropdown-jm2').childNodes[1].textContent = content.grade.jm2;
+            document.getElementById('dropdown-jm3').childNodes[1].textContent = content.grade.jm3;
+            document.getElementById('dropdown-sm').childNodes[1].textContent = content.grade.sm;
+            document.getElementById('dropdown-sm1').childNodes[1].textContent = content.grade.sm1;
+            document.getElementById('dropdown-sm2').childNodes[1].textContent = content.grade.sm2;
+            document.getElementById('dropdown-sm3').childNodes[1].textContent = content.grade.sm3;
+            
+            document.getElementById('malay').childNodes[1].textContent = content.subject.malay;
+            document.getElementById('english').childNodes[1].textContent = content.subject.english;
+            document.getElementById('chinese').childNodes[1].textContent = content.subject.chinese;
+            document.getElementById('maths').childNodes[1].textContent = content.subject.maths;
+            document.getElementById('science').childNodes[1].textContent = content.subject.science;
+            document.getElementById('history').childNodes[1].textContent = content.subject.history;
+            document.getElementById('geography').childNodes[1].textContent = content.subject.geography;
+            document.getElementById('arts').childNodes[1].textContent = content.subject.arts;
+            document.getElementById('music').childNodes[1].textContent = content.subject.music;
+            document.getElementById('it').childNodes[1].textContent = content.subject.it;
+            document.getElementById('economics').childNodes[1].textContent = content.subject.economics;
+            document.getElementById('accounting').childNodes[1].textContent = content.subject.accounting;
+            document.getElementById('business').childNodes[1].textContent = content.subject.business;
+            document.getElementById('biology').childNodes[1].textContent = content.subject.biology;
+            document.getElementById('chemistry').childNodes[1].textContent = content.subject.chemistry;
+            document.getElementById('physics').childNodes[1].textContent = content.subject.physics;
+            document.getElementById('advmaths').childNodes[1].textContent = content.subject.advmaths;
+            document.getElementById('bookkeeping').childNodes[1].textContent = content.subject.bookkeeping; 
+
+            loadBooks(language, content);
+        }
+
+        function popup(button) {
+            const popupTitle = document.querySelector('.popup-title h1');
+            const popupContent = document.getElementById('popup-content');
+            const popupText = document.querySelector('.popup-content p');
+            const content = document.getElementById('popup-content');
+            const close = document.querySelector('.popup-close');
+            if (button == "disclaimer") {
+                popupTitle.textContent = contentJSON[page_language].disclaimer;
+                popupText.innerHTML = "";
+                contentJSON[page_language].disclaimerContent.forEach(text => {
+                    popupText.innerHTML += text;
+                });
+            } else if (button == "copyright") {
+                popupTitle.textContent = contentJSON[page_language].copyright;
+                popupText.innerHTML = "";
+                contentJSON[page_language].copyrightContent.forEach(text => {
+                    popupText.innerHTML += text;
+                });
+            } else if (button == "manual") {
+                popupTitle.textContent = contentJSON[page_language].manual;
+                popupText.innerHTML = "";
+                contentJSON[page_language].manualContent.forEach(text => {
+                    popupText.innerHTML += text;
+                });
+            }
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function setMode(mode) {
+            if (mode == "dark") {
+                document.body.style.backgroundColor = "#000000";
+                document.body.style.color = "#ffffff";
+                document.querySelector('.navbar').classList.add("dark-mode");
+                if (document.querySelector('.sidebar').classList.contains('sidebar-active')) {
+                    document.querySelector('.hamburger img').src = "./img/hamburger-viewing-dark.svg";
+                } else {
+                    document.querySelector('#hamburger-menu img').src = "./img/hamburger-icon-dark.svg";
+                }
+                document.querySelector('#hamburger-menu img').classList.add('dark-mode');
+                document.querySelector('#hamburger-menu img').classList.remove('light-mode');
+                document.querySelector('#modeButton img').src = "./img/moon-dark.svg";
+                document.querySelector('#languageButton img').src = "./img/languages-dark.svg";
+                document.querySelector('.language-dropdown').classList.add("dark-mode");
+                document.querySelector('.sidebar').classList.add("dark-mode");
+                document.querySelectorAll('.popbtn').forEach(button => button.classList.add('dark-mode'));
+                document.querySelector('.popup-content').classList.add('dark-mode');
+                document.querySelector('.popup-title').classList.add('dark-mode');
+                document.querySelector('.popup-content').classList.add('dark-mode');
+                document.querySelector('.popup-close').classList.add('dark-mode');
+                document.querySelectorAll('.dropbtn').forEach(button => button.classList.add('dark-mode'));
+                document.querySelectorAll('.dropdown-content').forEach(content => content.classList.add('dark-mode'));
+            } else {
+                document.body.style.backgroundColor = "#ffffff";
+                document.body.style.color = "#000000";
+                document.querySelector('.navbar').classList.remove("dark-mode");
+                if (document.querySelector('.sidebar').classList.contains('sidebar-active')) {
+                    document.querySelector('.hamburger img').src = "./img/hamburger-viewing-light.svg";
+                } else document.querySelector('#hamburger-menu img').src = "./img/hamburger-icon-light.svg";
+                document.querySelector('#hamburger-menu img').classList.add('light-mode');
+                document.querySelector('#hamburger-menu img').classList.remove('dark-mode');
+                document.querySelector('#modeButton img').src = "./img/sun-light.svg";
+                document.querySelector('#languageButton img').src = "./img/languages-light.svg";
+                document.querySelector('.language-dropdown').classList.remove("dark-mode");
+                document.querySelector('.sidebar').classList.remove("dark-mode");
+                document.querySelectorAll('.popbtn').forEach(button => button.classList.remove('dark-mode'));
+                document.querySelector('.popup-content').classList.remove('dark-mode');
+                document.querySelector('.popup-title').classList.remove('dark-mode');
+                document.querySelector('.popup-content').classList.remove('dark-mode');
+                document.querySelector('.popup-close').classList.remove('dark-mode');
+                document.querySelectorAll('.dropbtn').forEach(button => button.classList.remove('dark-mode'));
+                document.querySelectorAll('.dropdown-content').forEach(content => content.classList.remove('dark-mode'));
+            }
+        }
+        setMode(mode);
+        function toggleMode() {
+            if (mode == "light") {
+                mode = "dark";
+                setMode("dark");
+                document.cookie = "mode=dark; expires=Fri, 31 Dec 9999 23:59:59 GMT; sameSite=Strict;";
+            } else {
+                mode = "light";
+                setMode("light");
+                document.cookie = "mode=light; expires=Fri, 31 Dec 9999 23:59:59 GMT; sameSite=Strict;";
+            }
+        }
+        function languageOption() {
+            document.getElementById('language-dropdown').classList.toggle('show');
+        }
+
+        function adjustbookTitleContainersHeight() {
+            const bookshelves = document.querySelectorAll('.bookshelf');
+            bookshelves.forEach(bookshelf => {
+                const books = bookshelf.querySelectorAll('.book');
+                let maxHeight = 0;
+                let currentRow = [];
+                books.forEach((book, index) => {
+                    const bookTitleContainer = book.querySelector('.book-title-container');
+                    bookTitleContainer.style.height = 'auto';
+                    const bookHeight = book.offsetHeight;
+                    if (currentRow.length == 0 || bookHeight == currentRow[0].offsetHeight)  {
+                        currentRow.push(book);
+                        maxHeight = Math.max(maxHeight, bookTitleContainer.offsetHeight);
+                    } else {
+                        currentRow.forEach(b => {
+                            const bookTitle = b.querySelector('.book-title');
+                            bookTitle.style.paddingTop = `${(maxHeight - bookTitle.offsetHeight + 8) / 2}px`;
+                            b.querySelector('.book-title-container').style.height = `${maxHeight}px`;
+                        });
+                        currentRow = [book];
+                        maxHeight = bookTitleContainer.offsetHeight;
+                    }
+                    if (index === books.length - 1) {
+                        currentRow.forEach(b => {
+                            const bookTitle = b.querySelector('.book-title');
+                            bookTitle.style.paddingTop = `${(maxHeight - bookTitle.offsetHeight + 8) / 2}px`;
+                            b.querySelector('.book-title-container').style.height = `${maxHeight}px`;
+                        });
+                        currentRow = [];
+                    }
+                });
+            });
+        }
+
+        let resizeTimeout;
+        let lastWidth = window.innerWidth;
+
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                if (Math.abs(window.innerWidth - lastWidth) >= 20) {
+                    adjustbookTitleContainersHeight();
+                    lastWidth = window.innerWidth;
+                }
+            }, 100);
+        });
+
+        window.addEventListener('load', async () => {
+            contentJSON = await (await fetch('./textbooks_page_data/content.json')).json();
+            booksContent = document.getElementById('books-content');
+            booksResponse = await fetch('./textbooks_page_data/books_data.json');
+            booksData = await booksResponse.json();
+            webpageJSON = await (await fetch('./webpage.json')).json();
+            document.querySelectorAll('#form-dropdown input[name="form"], #subject-dropdown input[name="subject"], #select-all-forms, #select-all-subjects').
+            forEach(checkbox => {
+                checkbox.checked = true;
+            });
+            loadPageWithLanguage(page_language);
+        });
+    </script>
+</body>
+</html>
