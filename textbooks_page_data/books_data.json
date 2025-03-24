@@ -290,19 +290,6 @@
     },
     "items":[
       {
-        "id": "jm3_arts_2002",
-        "title": {
-          "zh": "《初中美術》第三冊",
-          "zh-simp": "《初中美术》第三册",
-          "en-gb": "Junior Middle Arts Volume 3",
-          "ms-my": "Seni Menengah Rendah Jilid 3"
-        },
-        "subject": "arts",
-        "page": 63,
-        "size": 26242756,
-        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm3_arts_2002.pdf"
-      },
-      {
         "id": "jm2_arts_2020",
         "title": {
           "zh": "初中《美術》第二冊",
@@ -496,6 +483,19 @@
       "ms-my": "Menengah Rendah 3"
     },
     "items":[
+      {
+        "id": "jm3_arts_2002",
+        "title": {
+          "zh": "《初中美術》第三冊",
+          "zh-simp": "《初中美术》第三册",
+          "en-gb": "Junior Middle Arts Volume 3",
+          "ms-my": "Seni Menengah Rendah Jilid 3"
+        },
+        "subject": "arts",
+        "page": 63,
+        "size": 26242756,
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm3_arts_2002.pdf"
+      },
       {
         "id": "jm3_arts_2021",
         "title": {
