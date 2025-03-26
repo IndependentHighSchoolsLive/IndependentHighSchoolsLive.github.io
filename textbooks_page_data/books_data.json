@@ -1,4 +1,4 @@
-[
+  [
   {
     "grade_id": "jm",
     "grade": {
@@ -888,8 +888,9 @@
           "ms-my": "Apresiasi Seni Visual Jilid 1"
         },
         "subject": "arts",
-        "page": 0,
-        "size": 0
+        "page": 357,
+        "size": 128191188,
+        "dl_link": "https://drive.usercontent.google.com/download?id=1CNdxnuFvOhkmIUQROSZOxpUVIpUvjl9R&export=download&confirm=t"
       },
       {
         "id": "sm1_biology_2017",
@@ -939,8 +940,9 @@
           "ms-my": "Perniagaan Menengah Tinggi Jilid 1"
         },
         "subject": "business",
-        "page": 0,
-        "size": 0
+        "page": 214,
+        "size": 54433227,
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_business_studies_2023.pdf"
       },
       {
         "id": "sm1_chemistry_2017",
@@ -1311,8 +1313,9 @@
           "ms-my": "Matematik Menengah Tinggi Dua Jilid 1"
         },
         "subject": "maths",
-        "page": 0,
-        "size": 0
+        "page": 228,
+        "size": 43603400,
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm2_mathsA_2014.pdf"
       },
       {
         "id": "sm2_mathsB_2014",
@@ -1323,8 +1326,9 @@
           "ms-my": "Matematik Menengah Tinggi Dua Jilid 2"
         },
         "subject": "maths",
-        "page": 0,
-        "size": 0
+        "page": 197,
+        "size": 41988907,
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm2_mathsB_2014.pdf"
       },
       {
         "id": "sm2_advmathsA_1995",
