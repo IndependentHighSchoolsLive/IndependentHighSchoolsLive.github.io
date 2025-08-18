@@ -3,9 +3,615 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi from the past</title>
+    <title>14 樓</title>
+    <style>
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #f1f1f1;
+            color: black;
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            z-index: 20;
+        }
+        body.dark-mode .navbar {
+            background-color: #333333;
+            color: #fefdfc;
+        }
+        
+        .navbar .hamburger {
+            cursor: pointer;
+            margin-right: 20px;
+            margin-left: 10px;
+            background-color: transparent;
+            border: none;
+            z-index: 20;
+        }
+        .hamburger img {
+            transition: all 0.3s;
+        }
+
+        .navbar #webpage-title {
+            visibility: hidden;
+            display: flex;
+        }
+
+        .navbar-title {
+            position: relative;
+            z-index: 20;
+        }
+        
+        .navbar .site-preferences {
+            margin-left: auto;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .navbar .site-preferences button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin-left: 10px;
+            outline: none;
+        }
+        .navbar .site-preferences img {
+            cursor: pointer;
+            background-color: transparent;
+            width: 2.8em;
+            height: 2.8em;
+            border: none;
+        }
+        .language-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            right: 10px;
+            top: calc(100% + 10px);
+        }
+        .language-dropdown a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .language-dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+        body.dark-mode .language-dropdown {
+            background-color: #333333;
+        }
+        body.dark-mode .language-dropdown a {
+            color: white;
+        }
+        body.dark-mode .language-dropdown a:hover {
+            background-color: black;
+        }
+
+        .sidebar {
+            width: 231px;
+            height: 100%;
+            background-color: #f4f4f4;
+            position: fixed;
+            top: 0;
+            visibility: hidden;
+            margin-left: -271px;
+            transition: margin-left 0.3s;
+            padding: 20px;
+            z-index: 19;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .sidebar a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #c8ae81;
+        }
+        body.dark-mode .sidebar {
+            background-color: #3c3c3c;
+        }
+        body.dark-mode .sidebar a {
+            color: white;
+        }
+        body.dark-mode .sidebar a:hover {
+            background-color: black;
+        }
+        .sidebar.sidebar-active {
+            visibility: visible;
+            margin-left: 0px;
+        }
+
+        .show {
+            display: block;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            margin-left: 0;
+            transition: margin-left 0.3s;
+            padding: 20px;
+        }
+        .content.sidebar-active {
+            margin-left: 260px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            margin-left: 0;
+            transition: margin-left 0.3s;
+            padding: 20px;
+        }
+        .content.sidebar-active {
+            margin-left: 260px;
+        }
+
+        #summary {
+            margin: 19px 0;
+            padding: 17px;
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        body.dark-mode table {
+            background: #444444;
+            color: white;
+        }
+
+        thead {
+            background: #f0edfc;
+            color: #345678;
+        }
+
+        body.dark-mode thead {
+            background: #333333;
+            color: #eeeaaa;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        tbody tr:nth-child(odd) {
+            background: #ffffff;
+        }
+
+        body.dark-mode tbody tr:nth-child(odd) {
+            background: #050505;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #fdfbeb;
+        }
+
+        body.dark-mode tbody tr:nth-child(even) {
+            background: #1f1e1e;
+        }
+
+        thead tr:hover,
+        tbody tr:hover {
+            background: #dce6f5;
+            transition: 0.3s;
+        }
+
+        body.dark-mode thead tr:hover,
+        body.dark-mode tbody tr:hover {
+            background: #65cd65;
+            transition: 0.3s;
+        }
+
+        .sort-buttons {
+            display: inline-flex;
+            flex-direction: column;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+
+        .sort-buttons span {
+            font-size: 12px;
+            line-height: 10px;
+            color: #ddd;
+            user-select: none;
+        }
+
+    </style>
 </head>
 <body>
-    <h5>Hi from the past</h5>
+    <!-- Navigation bar starts here -->
+    <div class="navbar">
+        <button id="hamburger-menu" class="hamburger"><img src="./img/hamburger-icon-light.svg" alt="Menu" width="36em" height="36em"></button>
+        <h2 id="navbar-title" style="z-index: 20;"></h2>
+        <div class="site-preferences">
+            <h3 id="webpage-title"></h3>
+            <button id="modeButton" onclick="toggleMode()">
+                <img src="./img/sun-light.svg" alt="Dark Mode">
+            </button>
+            <button id="languageButton" onclick="languageOption()">
+                <img id="language-icon" src="./img/languages-light.svg" alt="Languages" width="36em" height="36em">
+            </button>
+            <div id="language-dropdown" class="language-dropdown">
+                <a href="#" onclick="changeLanguage('ms-my')">Bahasa Melayu</a>
+                <a href="#" onclick="changeLanguage('en-gb')">English</a>
+                <a href="#" onclick="changeLanguage('zh')">正體中文</a>
+                <a href="#" onclick="changeLanguage('zh-simp')">简体中文</a>
+            </div>
+        </div>
+    </div> 
+    <!-- Navigation bar ends here --> <!-- Sidebar starts here -->
+    <div class="sidebar">
+        <div style="margin-top: 11px;">
+
+        </div>
+    </div>
+    <br>
+    <!-- Sidebar ends here -->
+    <div id="summary">
+        
+    </div>
+    <div id="school-table-div">
+        <table id="school-table">
+            <thead>
+                <tr>
+                    <th>
+                        <div id="thead-school-name" style="display: inline-block;"></div>
+                        <div id="sortbySchoolNames" class="sort-buttons" onclick="sortTable(0)" style="vertical-align: sub; display: inline-block;"></div>
+                    </th>
+                    <th>
+                        <div id="thead-school-code" style="display: inline-block;"></div>
+                        <div id="sortbySchoolCodes" class="sort-buttons" onclick="sortTable(1)" style="vertical-align: sub; display: inline-block;"></div>
+                    </th>
+                    <th id="thead-school-anthem"></th>
+                    <th>
+                        <div id="thead-founded-on" style="display: inline-block;"></div>
+                        <div id="sortbyYearFounded" class="sort-buttons" onclick="sortTable(3)" style="vertical-align: sub; display: inline-block;"></div>
+                    </th>
+                </tr>
+            </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    </div>
+    <script>
+        let contentJSON = {};
+        let webpageJSON = {};
+        let schoolsJSON = {};
+
+        document.querySelector('.hamburger').addEventListener('click', async function() {
+            const sidebar = document.querySelector('.sidebar');
+            const content = contentJSON[page_language];
+            sidebar.classList.toggle('sidebar-active');
+            if (sidebar.classList.contains('sidebar-active')) {
+                sidebar.style.visibility = 'visible';
+                setTimeout(() => {
+                    if (!sidebar.classList.contains('sidebar-active'))
+                    sidebar.style.visibility = 'hidden';
+                }, 2000);
+            }
+            //document.querySelector('.content').classList.toggle('sidebar-active');
+            //document.querySelector('.dropdown').classList.toggle('sidebar-active');
+
+            const hamburgerIcon = document.querySelector('.hamburger img');
+            if (sidebar.classList.contains('sidebar-active')) {
+                if (document.body.classList.contains('dark-mode')) {
+                    hamburgerIcon.src = './img/hamburger-viewing-dark.svg';
+                } else {
+                    hamburgerIcon.src = './img/hamburger-viewing-light.svg';
+                }
+                document.querySelector('#webpage-title').style.visibility = 'visible';
+                document.querySelector('#navbar-title').textContent = content.navbarTitleSidebarActive;
+            } else {
+                if (document.body.classList.contains('dark-mode')) {
+                    hamburgerIcon.src = './img/hamburger-icon-dark.svg';
+                } else {
+                    hamburgerIcon.src = './img/hamburger-icon-light.svg';
+                }
+                document.querySelector('#webpage-title').style.visibility = 'hidden';
+                document.querySelector('#navbar-title').textContent = content.navbarTitle;
+            }
+        });
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        document.querySelectorAll('.dropbtn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.nextElementSibling.classList.toggle('show');
+            });
+        });
+
+        window.onclick = function(event) {
+            ["language"].forEach(type => {
+                const dropdown = document.getElementById(`${type}-dropdown`);
+                if (!event.target.id.startsWith(type) && !dropdown.contains(event.target)) {
+                    document.getElementById(`${type}-dropdown`).classList.remove('show');
+                }
+            });
+        }
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+        let mode = "light";
+        if (document.cookie.includes('mode')) {
+            mode = getCookie('mode');
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            mode = "dark";
+        } else {
+            document.cookie = "mode=light;";
+        }
+
+        let page_language = "zh";
+        if (document.cookie.includes('language')) {
+            page_language = getCookie('language');
+        }
+
+        function changeLanguage(language) {
+            document.cookie = `language=${language}; expires=Fri, 31 Dec 9999 23:59:59 GMT; sameSite=Strict;`;
+            if (language === page_language) return;
+            page_language = language;
+            loadPageWithLanguage(language);
+        }
+
+        function loadContents(language, content) {
+
+            window.scrollTo(0, window.scrollY);
+        }
+
+        async function loadPageWithLanguage(language) {
+            const scrollPosition = window.scrollY;
+            const content = contentJSON[language];
+            document.title = content.title;
+            const sidebar = document.querySelector('.sidebar');
+            const sidebarDiv = document.querySelector('.sidebar > div');
+            if (sidebar.classList.contains('sidebar-active')) {
+                document.getElementById('navbar-title').textContent = content.navbarTitleSidebarActive;
+                document.getElementById('webpage-title').textContent = content.navbarTitle;
+            } else {
+                document.getElementById('navbar-title').textContent = content.navbarTitle;
+                document.getElementById('webpage-title').textContent = content.navbarTitle;
+            }
+            ['school-name', 'school-code', 'school-anthem', 'founded-on'].forEach(id => {
+                const th = document.getElementById(`thead-${id}`);
+                if (th && content[id]) {
+                    th.innerHTML = content[id];
+                }
+            });
+
+            const tbody = document.getElementById('school-table').querySelector('tbody');
+            tbody.innerHTML = '';
+            let schoolAnthemInnerHTML = '';
+            Object.keys(schoolsJSON).forEach(schoolCode => {
+                const schoolData = schoolsJSON[schoolCode];
+                const tr = document.createElement('tr');
+                if (schoolData["school-anthem"]["musescore"] != "") {
+                    schoolAnthemInnerHTML = `<div style="display: inline-block;"><a href="${schoolData["school-anthem"]["musescore"]}">
+                                            <img src="./img/scores-notes-audio-available.svg" alt="Musescore"
+                                            style="width:1.3em;height:1.3em;;"></a></div>`
+                } else {
+                    schoolAnthemInnerHTML = `<div style="display: inline-block;"><a>
+                                            <img src="./img/scores-notes-audio-unavailable.svg" alt="Musescore"
+                                            style="width:1.3em;height:1.3em; cursor: not-allowed;"></a></div>`;
+                }
+                if (schoolData["school-anthem"]["picture"] != "") {
+                    schoolAnthemInnerHTML += ` <div style="display: inline-block;"><a href="${schoolData["school-anthem"]["picture"]}">
+                                            <img src="./img/picture-available.svg" alt="Musescore"
+                                            style="width:1.3em;height:1.3em;"></a></div>`
+                } else {
+                    schoolAnthemInnerHTML += ` <div style="display: inline-block;"><a>
+                                            <img src="./img/picture-unavailable.svg" alt="Musescore"
+                                            style="width:1.3em;height:1.3em; cursor: not-allowed;"></a></div>`;
+                }
+                if (schoolData["school-anthem"]["pdf"] != "") {
+                    schoolAnthemInnerHTML += ` <div style="display: inline-block;"><a href="${schoolData["school-anthem"]["pdf"]}">
+                                            <img src="./img/file-pdf-duotone-available.svg" alt="PDF"
+                                            style="width:1.3em;height:1.3em;"></a></div>`;
+                } else {
+                    schoolAnthemInnerHTML += ` <div style="display: inline-block;"><a>
+                                            <img src="./img/file-pdf-duotone-unavailable.svg" alt="PDF"
+                                            style="width:1.3em;height:1.3em; cursor: not-allowed;"></a></div>`;
+                }
+
+                tr.innerHTML = `<td>${schoolData.BM}<br>${schoolData.BC}</td><td>${schoolCode.split("_")[0]}</td>
+                                <td>${schoolAnthemInnerHTML}</td><td>${schoolData['founded-on'] ? schoolData['founded-on'] : ''}</td>`;
+                tbody.appendChild(tr);
+            });
+
+            sidebarDiv.innerHTML = '<h1 style="visibility: hidden;">2025</h1>';
+            const languageLinks = webpageJSON[language];
+            for (const key in languageLinks) {
+                if (languageLinks.hasOwnProperty(key)) {
+                    const linkData = languageLinks[key];
+                    const a = document.createElement('a');
+                    a.href = linkData.link;
+                    a.textContent = linkData.title;
+                    sidebarDiv.appendChild(a);
+                }
+            }
+
+            loadContents(language, content);
+        }
+
+        function setMode(mode) {
+            if (mode == "dark") {
+                document.body.style.backgroundColor = "#000000";
+                document.body.style.color = "#ffffff";
+                if (document.querySelector('.sidebar').classList.contains('sidebar-active')) {
+                    document.querySelector('.hamburger img').src = "./img/hamburger-viewing-dark.svg";
+                } else {
+                    document.querySelector('#hamburger-menu img').src = "./img/hamburger-icon-dark.svg";
+                }
+                document.body.classList.add('dark-mode');
+                document.querySelector('#modeButton img').src = "./img/moon-dark.svg";
+                document.querySelector('#languageButton img').src = "./img/languages-dark.svg";
+                document.querySelectorAll('img[src="./img/sort-alt-light.svg"]').forEach(img => {
+                    img.src = "./img/sort-alt-dark.svg";
+                });
+                document.querySelectorAll('img[src="./img/sort-alpha-down-light.svg"]').forEach(img => {
+                    img.src = "./img/sort-alpha-down-dark.svg";
+                });
+                document.querySelectorAll('img[src="./img/sort-alpha-alt-up-light.svg"]').forEach(img => {
+                    img.src = "./img/sort-alpha-alt-up-dark.svg";
+                });
+                document.querySelectorAll('img[src="./img/sort-numeric-down-light.svg"]').forEach(img => {
+                    img.src = "./img/sort-numeric-down-dark.svg";
+                });
+                document.querySelectorAll('img[src="./img/sort-numeric-alt-up-light.svg"]').forEach(img => {
+                    img.src = "./img/sort-numeric-alt-up-dark.svg";
+                });
+            } else {
+                document.body.style.backgroundColor = "#ffffff";
+                document.body.style.color = "#000000";
+                document.body.classList.remove('dark-mode');
+                if (document.querySelector('.sidebar').classList.contains('sidebar-active')) {
+                    document.querySelector('.hamburger img').src = "./img/hamburger-viewing-light.svg";
+                } else document.querySelector('#hamburger-menu img').src = "./img/hamburger-icon-light.svg";
+                document.querySelector('#modeButton img').src = "./img/sun-light.svg";
+                document.querySelector('#languageButton img').src = "./img/languages-light.svg";
+                document.querySelectorAll('img[src="./img/sort-alt-dark.svg"]').forEach(img => {
+                    img.src = "./img/sort-alt-light.svg";
+                });
+                document.querySelectorAll('img[src="./img/sort-alpha-down-dark.svg"]').forEach(img => {
+                    img.src = "./img/sort-alpha-down-light.svg";
+                });
+                document.querySelectorAll('img[src="./img/sort-alpha-alt-up-dark.svg"]').forEach(img => {
+                    img.src = "./img/sort-alpha-alt-up-light.svg";
+                });
+                document.querySelectorAll('img[src="./img/sort-numeric-down-dark.svg"]').forEach(img => {
+                    img.src = "./img/sort-numeric-down-light.svg";
+                });
+                document.querySelectorAll('img[src="./img/sort-numeric-alt-up-dark.svg"]').forEach(img => {
+                    img.src = "./img/sort-numeric-alt-up-light.svg";
+                });
+            }
+        }
+        setMode(mode);
+        function toggleMode() {
+            if (mode == "light") {
+                mode = "dark";
+                setMode("dark");
+                document.cookie = "mode=dark; expires=Fri, 31 Dec 9999 23:59:59 GMT; sameSite=Strict;";
+            } else {
+                mode = "light";
+                setMode("light");
+                document.cookie = "mode=light; expires=Fri, 31 Dec 9999 23:59:59 GMT; sameSite=Strict;";
+            }
+        }
+        function languageOption() {
+            document.getElementById('language-dropdown').classList.toggle('show');
+        }
+
+        window.addEventListener('load', async () => {
+            contentJSON = await (await fetch('./homepage/content.json')).json();
+            webpageJSON = await (await fetch('./webpage.json')).json();
+            schoolsJSON = await (await fetch('./homepage/schools.json')).json();
+            document.querySelectorAll('#form-dropdown input[name="form"], #subject-dropdown input[name="subject"], #select-all-forms, #select-all-subjects').
+            forEach(checkbox => {
+                checkbox.checked = true;
+            });
+            loadPageWithLanguage(page_language);
+            sortTable(1);
+        });
+
+        const tableOrder = {
+            "bySchoolNames": 0,
+            "byYearFounded": 0,
+            "bySchoolCodes": -1
+        }
+        function sortTable(columnIndex) {
+            const table = document.getElementById("school-table");
+            const tableOrderKey = [ "bySchoolNames", "bySchoolCodes", "", "byYearFounded" ];
+            let order = 0
+            Object.keys(tableOrder).forEach(key => {
+                if (key == tableOrderKey[columnIndex]) {
+                    if (tableOrder[key] == 1) {
+                        tableOrder[key] = -1;
+                    } else {
+                        tableOrder[key] = 1;
+                    }
+                    order = tableOrder[key];
+                    if (key == "byYearFounded") {
+                        if (order == 1) {
+                            document.getElementById(`sort${key}`).innerHTML = `<img src="./img/sort-numeric-down-${mode}.svg" alt="Sort Ascending" style="width:1.3em;height:1.3em;">`;
+                        } else {
+                            document.getElementById(`sort${key}`).innerHTML = `<img src="./img/sort-numeric-alt-up-${mode}.svg" alt="Sort Descending" style="width:1.3em;height:1.3em;">`;
+                        }
+                    } else {
+                        if (order == 1) {
+                            document.getElementById(`sort${key}`).innerHTML = `<img src="./img/sort-alpha-down-${mode}.svg" alt="Sort Ascending" style="width:1.3em;height:1.3em;">`;
+                        } else {
+                            document.getElementById(`sort${key}`).innerHTML = `<img src="./img/sort-alpha-alt-up-${mode}.svg" alt="Sort Descending" style="width:1.3em;height:1.3em;">`;
+                        }
+                    }
+                } else {
+                    tableOrder[key] = 0;
+                    document.getElementById(`sort${key}`).innerHTML = `<img src="./img/sort-alt-${mode}.svg" alt="Click to Sort" style="width:1.3em;height:1.3em;">`;
+                }
+            });
+            if (columnIndex != 3) {
+                const tbody = table.tBodies[0];
+                const rowsArray = Array.from(tbody.querySelectorAll("tr"));
+
+                rowsArray.sort((a, b) => {
+                    const aText = a.children[columnIndex].innerText.trim();
+                    const bText = b.children[columnIndex].innerText.trim();
+
+                    if (order == 1) {
+                        return aText.localeCompare(bText);
+                    } else {
+                        return bText.localeCompare(aText);
+                    }
+                });
+                rowsArray.forEach(row => tbody.appendChild(row));
+
+            } else if (columnIndex == 3) {
+                const tbody = table.tBodies[0];
+                const rowsArray = Array.from(tbody.querySelectorAll("tr"));
+
+                rowsArray.sort((a, b) => {
+                    const aText = a.children[columnIndex].innerText.trim();
+                    const bText = b.children[columnIndex].innerText.trim();
+
+                    if (order == 1) {
+                        return aText - bText;
+                    } else {
+                        return bText - aText;
+                    }
+                });
+                rowsArray.forEach(row => tbody.appendChild(row));
+            }
+        }
+    </script>
 </body>
 </html>

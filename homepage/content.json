@@ -1,0 +1,38 @@
+{
+  "zh": {
+    "title": "獨中資訊處",
+    "navbarTitle": "首頁",
+    "navbarTitleSidebarActive": "獨中資訊處",
+    "school-name": "學校名稱",
+    "school-code": "學校代碼",
+    "school-anthem": "校歌",
+    "founded-on": "成立日期"
+  },
+  "zh-simp": {
+    "title": "独中资讯处",
+    "navbarTitle": "首页",
+    "navbarTitleSidebarActive": "独中资讯处",
+    "school-name": "学校名称",
+    "school-code": "学校代码",
+    "school-anthem": "校歌",
+    "founded-on": "成立日期"
+  },
+  "ms-my": {
+    "title": "Laman Maklumat Sekolah Menengah Persendirian",
+    "navbarTitle": "Laman Utama",
+    "navbarTitleSidebarActive": "Laman Maklumat Sekolah Menengah Persendirian",
+    "school-name": "Nama Sekolah",
+    "school-code": "Kod Sekolah",
+    "school-anthem": "Lagu Sekolah",
+    "founded-on": "Tarikh Penubuhan"
+  },
+  "en-gb": {
+    "title": "Independent High Schools Information Site",
+    "navbarTitle": "Homepage",
+    "navbarTitleSidebarActive": "Independent High Schools Information Site",
+    "school-name": "School Name",
+    "school-code": "School Code",
+    "school-anthem": "School Anthem",
+    "founded-on": "Founded On"
+  }
+}

@@ -646,11 +646,17 @@
             const scrollPosition = window.scrollY;
             const content = contentJSON[language];
             document.title = content.title;
-            document.getElementById('navbar-title').textContent = content.navbarTitle;
-            document.getElementById('webpage-title').textContent = content.navbarTitle;
-            
-            const sidebar = document.querySelector('.sidebar > div');
-            sidebar.innerHTML = '<h1 style="visibility: hidden;">2025</h1>';
+            const sidebar = document.querySelector('.sidebar');
+            const sidebarDiv = document.querySelector('.sidebar > div');
+            if (sidebar.classList.contains('sidebar-active')) {
+                document.getElementById('navbar-title').textContent = content.navbarTitleSidebarActive;
+                document.getElementById('webpage-title').textContent = content.navbarTitle;
+            } else {
+                document.getElementById('navbar-title').textContent = content.navbarTitle;
+                document.getElementById('webpage-title').textContent = content.navbarTitle;
+            }
+
+            sidebarDiv.innerHTML = '<h1 style="visibility: hidden;">2025</h1>';
             const languageLinks = webpageJSON[language];
             for (const key in languageLinks) {
                 if (languageLinks.hasOwnProperty(key)) {
@@ -658,7 +664,7 @@
                     const a = document.createElement('a');
                     a.href = linkData.link;
                     a.textContent = linkData.title;
-                    sidebar.appendChild(a);
+                    sidebarDiv.appendChild(a);
                 }
             }
 

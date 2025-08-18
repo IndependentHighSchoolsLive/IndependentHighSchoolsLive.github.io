@@ -1,0 +1,700 @@
+{
+    "APF1006": {
+        "BC": "班台育青中學",
+        "BC_Simplified": "班台育青中学",
+        "BM": "SEKOLAH MENENGAH YIK CHING (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "APF1009": {
+        "BC": "曼绒南華獨立中學",
+        "BC_Simplified": "曼绒南华独立中学",
+        "BM": "SEKOLAH TINGGI NAN HWA (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        },
+        "founded-on": "1936-1-12"
+    },
+    "APF2002": {
+        "BC": "培南獨立中學",
+        "BC_Simplified": "培南独立中学",
+        "BM": "SEKOLAH MENENGAH POI LAM (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "APF2004": {
+        "BC": "怡保深齋中學",
+        "BC_Simplified": "怡保深斋中学",
+        "BM": "SEKOLAH MENENGAH SHEN JAI (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "APF2007": {
+        "BC": "霹靂育才獨立中學",
+        "BC_Simplified": "霹雳育才独立中学",
+        "BM": "SEKOLAH MENENGAH YUK CHOY (SUWA)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "APF4005": {
+        "BC": "江沙崇華獨立中學",
+        "BC_Simplified": "江沙崇华独立中学",
+        "BM": "SEKOLAH MENENGAH TSUNG WAH (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "APF5003": {
+        "BC": "安順三民獨立中學",
+        "BC_Simplified": "安顺三民独立中学",
+        "BM": "SEKOLAH MENENGAH SAN MIN (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "APF6008": {
+        "BC": "太平華聯中學",
+        "BC_Simplified": "太平华联中学",
+        "BM": "SEKOLAH TINGGI HUA LIAN (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "APF9001": {
+        "BC": "金寶培元獨立中學",
+        "BC_Simplified": "金宝培元独立中学",
+        "BM": "SEKOLAH MENENGAH PEI YUAN (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "BPCA001": {
+        "BC": "巴生光華（獨立）中學",
+        "BC_Simplified": "巴生光华（独立）中学",
+        "BM": "SEKOLAH MENENGAH PERSENDIRIAN KWANG HUA KLANG",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        },
+        "founded-on": "1954-2-21"
+    },
+    "BPCA002": {
+        "BC": "巴生濱華中學",
+        "BC_Simplified": "巴生滨华中学",
+        "BM": "SEKOLAH MENENGAH PIN HWA",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "BPCA003": {
+        "BC": "巴生興華中學",
+        "BC_Simplified": "巴生兴华中学",
+        "BM": "SEKOLAH MENENGAH HIN HUA",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "BPCA004": {
+        "BC": "巴生中華獨立中學",
+        "BC_Simplified": "巴生中华独立中学",
+        "BM": "SEKOLAH MENENGAH PERSENDIRIAN CINA CHUNG HUA",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "DPC1001": {
+        "BC": "吉蘭丹中華獨立中學",
+        "BC_Simplified": "吉兰丹中华独立中学",
+        "BM": "SEKOLAH MENENGAH PERSENDIRIAN CHUNG HWA",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "JPCA001": {
+        "BC": "峇株華仁中學",
+        "BC_Simplified": "峇株华仁中学",
+        "BM": "SEKOLAH MENENGAH CINA BATU PAHAT",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "JPCA002": {
+        "BC": "新文龍中華中學",
+        "BC_Simplified": "新文龙中华中学",
+        "BM": "SEKOLAH MENENGAH CHONG HWA RENGIT",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "JPCA003": {
+        "BC": "永平中學",
+        "BC_Simplified": "永平中学",
+        "BM": "SEKOLAH MENENGAH CINA YONG PENG",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "JPCB001": {
+        "BC": "新山寬柔中學",
+        "BC_Simplified": "新山宽柔中学",
+        "BM": "SM FOON YEW JOHOR BAHRU",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "JPCB001_1": {
+        "BC": "寬柔中學古來分校",
+        "BC_Simplified": "宽柔中学古来分校",
+        "BM": "SM FOON YEW JOHOR BAHRU - KULAI",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "JPCB001_2": {
+        "BC": "寬柔中學至達城分校",
+        "BC_Simplified": "宽柔中学至达城分校",
+        "BM": "SM FOON YEW JOHOR BAHRU - SERI ALAM",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "JPCC001": {
+        "BC": "居鑾中華中學",
+        "BC_Simplified": "居銮中华中学",
+        "BM": "SEKOLAH MENENGAH CHONG HWA KLUANG",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "JPCF001": {
+        "BC": "利豐港培華獨立中學",
+        "BC_Simplified": "利丰港培华独立中学",
+        "BM": "SEKOLAH MENENGAH PERSENDIRIAN PEI HWA",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "JPCF002": {
+        "BC": "麻坡中化中學",
+        "BC_Simplified": "麻坡中化中学",
+        "BM": "SEKOLAH TINGGI CHUNG HWA MUAR",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "JPCG001": {
+        "BC": "笨珍培群獨立中學",
+        "BC_Simplified": "笨珍培群独立中学",
+        "BM": "SEKOLAH MENENGAH PEI CHUN PONTIAN",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "KPC2001": {
+        "BC": "亞羅士打吉華獨立中學",
+        "BC_Simplified": "亚罗士打吉华独立中学",
+        "BM": "SEKOLAH MENENGAH KEAT HWA (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "KPC2002": {
+        "BC": "亞羅士打新民獨立中學",
+        "BC_Simplified": "亚罗士打新民独立中学",
+        "BM": "SEKOLAH MENENGAH SIN MIN (PERSENDIRIAN) ALOR SETAR",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "KPC3001": {
+        "BC": "雙溪大年新民獨立中學",
+        "BC_Simplified": "双溪大年新民独立中学",
+        "BM": "SEKOLAH MENENGAH SIN MIN (PERSENDIRIAN) SG. PETANI",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "MGC2135": {
+        "BC": "馬六甲培風中學",
+        "BC_Simplified": "马六甲培风中学",
+        "BM": "SEKOLAH MENENGAH PAY FONG",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "NPC2001": {
+        "BC": "波德申中華中學",
+        "BC_Simplified": "波德申中华中学",
+        "BM": "SEKOLAH MENENGAH CHUNG HUA PORT DICKSON",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "NPC4001": {
+        "BC": "芙蓉中華中學",
+        "BC_Simplified": "芙蓉中华中学",
+        "BM": "SEKOLAH TINGGI CHUNG HWA SEREMBAN",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "PPCA001": {
+        "BC": "大山腳日新獨立中學",
+        "BC_Simplified": "大山脚日新独立中学",
+        "BM": "SEKOLAH MENENGAH JIT SIN (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "PPCB001": {
+        "BC": "檳城鐘靈獨立中學",
+        "BC_Simplified": "槟城钟灵独立中学",
+        "BM": "SEKOLAH MENENGAH CHUNG LING (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "PPCB002": {
+        "BC": "檳城韓江中學",
+        "BC_Simplified": "槟城韩江中学",
+        "BM": "SEKOLAH MENENGAH HAN CHIANG (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "PPCB003": {
+        "BC": "檳城檳華女子獨立中學",
+        "BC_Simplified": "槟城槟华女子独立中学",
+        "BM": "SEKOLAH MENENGAH PEREMPUAN CINA (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "PPCB004": {
+        "BC": "檳城菩提獨立中學",
+        "BC_Simplified": "槟城菩提独立中学",
+        "BM": "SEKOLAH MENENGAH PHOR TAY PERSENDIRIAN",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "WPC0001": {
+        "BC": "吉隆坡中華獨立中學",
+        "BC_Simplified": "吉隆坡中华独立中学",
+        "BM": "SEKOLAH MENENGAH CHONG HWA KUALA LUMPUR",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        },
+        "founded-on": "1919-3-21"
+    },
+    "WPC0002": {
+        "BC": "吉隆坡尊孔獨立中學",
+        "BC_Simplified": "吉隆坡尊孔独立中学",
+        "BM": "SEKOLAH MENENGAH CONFUCIAN (PERSENDIRIAN)",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "WPC0003": {
+        "BC": "吉隆坡坤成中學",
+        "BC_Simplified": "吉隆坡坤成中学",
+        "BM": "SEKOLAH MENENGAH KUEN CHENG",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "WPC0004": {
+        "BC": "吉隆坡循人中學",
+        "BC_Simplified": "吉隆坡循人中学",
+        "BM": "SEKOLAH MENENGAH TSUN JIN",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        },
+        "founded-on": "1913-4-7"
+    },
+    "XPC1307": {
+        "BC": "丹南崇正中學",
+        "BC_Simplified": "丹南崇正中学",
+        "BM": "SEKOLAH MENENGAH TSHUNG TSIN TENOM",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "XPC2008": {
+        "BC": "山打根育源獨立中學",
+        "BC_Simplified": "山打根育源独立中学",
+        "BM": "SEKOLAH MENENGAH YU YUAN",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "XPC3009": {
+        "BC": "斗湖巴華中學",
+        "BC_Simplified": "斗湖巴华中学",
+        "BM": "SEKOLAH TINGGI CINA SABAH",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "XPC4003": {
+        "BC": "亞庇建國中學",
+        "BC_Simplified": "亚庇建国中学",
+        "BM": "SEKOLAH MENENGAH KIAN KOK",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "XPC4006": {
+        "BC": "沙巴崇正中學",
+        "BC_Simplified": "沙巴崇正中学",
+        "BM": "SEKOLAH MENENGAH TSHUNG TSIN SABAH",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "XPC6201": {
+        "BC": "沙巴保佛中學",
+        "BC_Simplified": "沙巴保佛中学",
+        "BM": "BEAUFORT MIDDLE SCHOOL",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "XPC6402": {
+        "BC": "沙巴吧巴中學",
+        "BC_Simplified": "沙巴吧巴中学",
+        "BM": "PAPAR MIDDLE SCHOOL",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "XPC7004": {
+        "BC": "沙巴拿篤中學",
+        "BC_Simplified": "沙巴拿笃中学",
+        "BM": "SEKOLAH MENENGAH LAHAD DATU",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "XPC8205": {
+        "BC": "古達培正中學",
+        "BC_Simplified": "古达培正中学",
+        "BM": "SEKOLAH MENENGAH PEI TSIN",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCA001": {
+        "BC": "古晉中華第一中學",
+        "BC_Simplified": "古晋中华第一中学",
+        "BM": "SEKOLAH MENENGAH CHUNG HUA NO.1",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCA002": {
+        "BC": "古晉中華第三中學",
+        "BC_Simplified": "古晋中华第三中学",
+        "BM": "SEKOLAH MENENGAH CHUNG HUA NO.3",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCG001": {
+        "BC": "詩巫公教中學",
+        "BC_Simplified": "诗巫公教中学",
+        "BM": "SEKOLAH MENENGAH KATHOLIK",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCG002": {
+        "BC": "詩巫光民中學",
+        "BC_Simplified": "诗巫光民中学",
+        "BM": "SEKOLAH MENENGAH GUONG MING",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCG003": {
+        "BC": "詩巫黃乃裳中學",
+        "BC_Simplified": "诗巫黄乃裳中学",
+        "BM": "SEKOLAH MENENGAH WONG NAI SIONG",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        },
+        "founded-on": "1967-1-13"
+    },
+    "YPCG004": {
+        "BC": "詩巫公民中學",
+        "BC_Simplified": "诗巫公民中学",
+        "BM": "SEKOLAH MENENGAH CITIZEN",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCG005": {
+        "BC": "詩巫建興中學",
+        "BC_Simplified": "诗巫建兴中学",
+        "BM": "SEKOLAH MENENGAH KIANG HIN",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCK001": {
+        "BC": "美里培民中學",
+        "BC_Simplified": "美里培民中学",
+        "BM": "SEKOLAH MENENGAH PEI MIN",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCL003": {
+        "BC": "古晉中華第四中學",
+        "BC_Simplified": "古晋中华第四中学",
+        "BM": "SEKOLAH MENENGAH CHUNG HUA NO.4",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCQ002": {
+        "BC": "西連民衆中學",
+        "BC_Simplified": "西连民众中学",
+        "BM": "SEKOLAH MENENGAH AWAM SERIAN",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCS002": {
+        "BC": "美里廉律中學",
+        "BC_Simplified": "美里廉律中学",
+        "BM": "SEKOLAH MENENGAH JALAN RIAM",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCU001": {
+        "BC": "美里民立中學",
+        "BC_Simplified": "美里民立中学",
+        "BM": "SEKOLAH MENENGAH MIN LIT",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCX001": {
+        "BC": "泗里奎民立中學",
+        "BC_Simplified": "泗里奎民立中学",
+        "BM": "SEKOLAH MENENGAH MING LIK, SARIKEI",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "YPCZ001": {
+        "BC": "民都魯開智中學",
+        "BC_Simplified": "民都鲁开智中学",
+        "BM": "SEKOLAH MENENGAH KAI DEE",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    },
+    "CGAE002": {
+        "BC": "關丹中華中學",
+        "BC_Simplified": "关丹中华中学",
+        "BM": "SEKOLAH MENENGAH CHONG HWA",
+        "school-anthem": {
+            "title": "",
+            "musescore": "",
+            "pdf": "",
+            "picture": ""
+        }
+    }
+}
