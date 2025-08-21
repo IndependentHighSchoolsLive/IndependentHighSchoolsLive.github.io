@@ -100,13 +100,13 @@
     "size": "文件大小",
     "grade": {
       "jm": " 初中",
-      "jr1": " 初一",
-      "jr2": " 初二",
-      "jr3": " 初三",
+      "jm1": " 初一",
+      "jm2": " 初二",
+      "jm3": " 初三",
       "sm": " 高中",
-      "sr1": " 高一",
-      "sr2": " 高二",
-      "sr3": " 高三"
+      "sm1": " 高一",
+      "sm2": " 高二",
+      "sm3": " 高三"
     },
     "subject": {
       "malay": " 马来西亚文",
@@ -175,13 +175,13 @@
     "size": "Saiz",
     "grade": {
       "jm": " Tingkatan Menengah Rendah",
-      "jr1": " Tingkatan 1",
-      "jr2": " Tingkatan 2",
-      "jr3": " Tingkatan 3",
+      "jm1": " Tingkatan 1",
+      "jm2": " Tingkatan 2",
+      "jm3": " Tingkatan 3",
       "sm": "Tingkatan Menengah Tinggi",
-      "sr1": " Tingkatan 4",
-      "sr2": " Tingkatan 5",
-      "sr3": " Tingkatan 6"
+      "sm1": " Tingkatan 4",
+      "sm2": " Tingkatan 5",
+      "sm3": " Tingkatan 6"
     },
     "subject": {
       "malay": " Bahasa Melayu",
@@ -248,13 +248,13 @@
     "size": "Size",
     "grade": {
       "jm": " Junior Middle",
-      "jr1": " Junior 1",
-      "jr2": " Junior 2",
-      "jr3": " Junior 3",
+      "jm1": " Junior 1",
+      "jm2": " Junior 2",
+      "jm3": " Junior 3",
       "sm": " Senior Middle",
-      "sr1": " Senior 1",
-      "sr2": " Senior 2",
-      "sr3": " Senior 3"
+      "sm1": " Senior 1",
+      "sm2": " Senior 2",
+      "sm3": " Senior 3"
     },
     "subject": {
       "malay": " Malay",

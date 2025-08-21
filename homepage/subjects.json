@@ -1,0 +1,206 @@
+{
+    "JY01": {
+        "ms-my": "Bahasa Cina",
+        "en-gb": "Chinese Language",
+        "zh": "華文",
+        "zh-simp": "华文"
+    },
+    "JY02": {
+        "ms-my": "Bahasa Malaysia",
+        "en-gb": "Standard Malay",
+        "zh": "馬來西亞文",
+        "zh-simp": "马来西亚文"
+    },
+    "JY03": {
+        "ms-my": "Bahasa Inggeris",
+        "en-gb": "English Language",
+        "zh": "英文",
+        "zh-simp": "英文"
+    },
+    "JC04": {
+        "ms-my": "Matematik",
+        "en-gb": "Mathematics",
+        "zh": "數學",
+        "zh-simp": "数学"
+    },
+    "JC05": {
+        "ms-my": "Sains",
+        "en-gb": "Science",
+        "zh": "科學",
+        "zh-simp": "科学"
+    },
+    "JY06": {
+        "ms-my": "Sejarah",
+        "en-gb": "History",
+        "zh": "歷史",
+        "zh-simp": "历史"
+    },
+    "JY07": {
+        "ms-my": "Geografi",
+        "en-gb": "Geography",
+        "zh": "地理",
+        "zh-simp": "地理"
+    },
+    "JY08": {
+        "ms-my": "Seni",
+        "en-gb": "Arts",
+        "zh": "美術",
+        "zh-simp": "美术"
+    },
+    "SY01": {
+        "ms-my": "Bahasa Cina",
+        "en-gb": "Chinese Language",
+        "zh": "華文",
+        "zh-simp": "华文"
+    },
+    "SY02": {
+        "ms-my": "Bahasa Malaysia",
+        "en-gb": "Standard Malay",
+        "zh": "馬來西亞文",
+        "zh-simp": "马来西亚文"
+    },
+    "SY03": {
+        "ms-my": "Bahasa Inggeris",
+        "en-gb": "English Language",
+        "zh": "英文",
+        "zh-simp": "英文"
+    },
+    "SC04": {
+        "ms-my": "Matematik",
+        "en-gb": "Mathematics",
+        "zh": "數學",
+        "zh-simp": "数学"
+    },
+    "SC05": {
+        "ms-my": "Matematik Lanjutan",
+        "en-gb": "Advanced Mathematics",
+        "zh": "高級數學",
+        "zh-simp": "高级数学"
+    },
+    "SC06": {
+        "ms-my": "Matematik Lanjutan (I)",
+        "en-gb": "Advanced Mathematics (I)",
+        "zh": "高級數學 (I)",
+        "zh-simp": "高级数学 (I)"
+    },
+    "SC07": {
+        "ms-my": "Matematik Lanjutan (II)",
+        "en-gb": "Advanced Mathematics (II)",
+        "zh": "高級數學 (II)",
+        "zh-simp": "高级数学 (II)"
+    },
+    "SY08": {
+        "ms-my": "Sejarah",
+        "en-gb": "History",
+        "zh": "歷史",
+        "zh-simp": "历史"
+    },
+    "SY09": {
+        "ms-my": "Geografi",
+        "en-gb": "Geography",
+        "zh": "地理",
+        "zh-simp": "地理"
+    },
+    "SC10": {
+        "ms-my": "Biologi",
+        "en-gb": "Biology",
+        "zh": "生物",
+        "zh-simp": "生物"
+    },
+    "SC11": {
+        "ms-my": "Kimia",
+        "en-gb": "Chemistry",
+        "zh": "化學",
+        "zh-simp": "化学"
+    },
+    "SC12": {
+        "ms-my": "Fizik",
+        "en-gb": "Physics",
+        "zh": "物理",
+        "zh-simp": "物理"
+    },
+    "SC14": {
+        "ms-my": "Pengajian Perniagaan",
+        "en-gb": "Business Studies",
+        "zh": "商業學",
+        "zh-simp": "商业学"
+    },
+    "SC15": {
+        "ms-my": "Pembukuan dan Perakaunan",
+        "en-gb": "Bookkeeping and Accounts",
+        "zh": "簿記與會計",
+        "zh-simp": "簿记与会计"
+    },
+    "SC16": {
+        "ms-my": "Perakaunan",
+        "en-gb": "Accounting",
+        "zh": "會計",
+        "zh-simp": "会计"
+    },
+    "SY17": {
+        "ms-my": "Ekonomi",
+        "en-gb": "Economics",
+        "zh": "經濟學",
+        "zh-simp": "经济学"
+    },
+    "SY18": {
+        "ms-my": "Komputer & Teknologi Maklumat",
+        "en-gb": "Computer & Information Technology",
+        "zh": "電腦與資訊工藝",
+        "zh-simp": "电脑与资讯工艺"
+    },
+    "SY19": {
+        "ms-my": "Seni",
+        "en-gb": "Arts",
+        "zh": "美術",
+        "zh-simp": "美术"
+    },
+    "SY20": {
+        "ms-my": "Prinsip Elektrik",
+        "en-gb": "Principles of Electricity",
+        "zh": "電學原理",
+        "zh-simp": "电学原理"
+    },
+    "SY21": {
+        "ms-my": "Elektronik",
+        "en-gb": "Electronics",
+        "zh": "電子學",
+        "zh-simp": "电子学"
+    },
+    "SY22": {
+        "ms-my": "Logik Digital",
+        "en-gb": "Digital Logic",
+        "zh": "數位邏輯",
+        "zh-simp": "数位逻辑"
+    },
+    "SY23": {
+        "ms-my": "Jentera Elektrik",
+        "en-gb": "Electric Machinery",
+        "zh": "電機學",
+        "zh-simp": "电机学"
+    },
+    "SY24": {
+        "ms-my": "Apresiasi Seni Visual",
+        "en-gb": "Arts Appreciation",
+        "zh": "美術賞析",
+        "zh-simp": "美术赏析"
+    },
+    "SY25": {
+        "ms-my": "Reka Bentuk Grafik",
+        "en-gb": "Graphic Design",
+        "zh": "平面設計",
+        "zh-simp": "平面设计"
+    },
+    "SY26": {
+        "ms-my": "Teori dan Praktik Masakan",
+        "en-gb": "Culinary Theories and Practices",
+        "zh": "廚藝理論與實務",
+        "zh-simp": "厨艺理论与实务"
+    },
+    "SY27": {
+        "ms-my": "Teori dan Praktik Penyajian",
+        "en-gb": "Catering Theories and Practices",
+        "zh": "餐飲理論與實務",
+        "zh-simp": "餐饮理论与实务"
+    }
+}

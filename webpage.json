@@ -7,6 +7,10 @@
         "UEC_Textbooks": {
             "title": "獨中課本",
             "link": "UEC_Textbooks.html"
+        },
+        "UEC_Trial_Papers": {
+            "title": "預試試卷",
+            "link": "UEC_Trial_Papers.html"
         }
     },
     "zh-simp": {
@@ -17,6 +21,10 @@
         "UEC_Textbooks": {
             "title": "独中课本",
             "link": "UEC_Textbooks.html"
+        },
+        "UEC_Trial_Papers": {
+            "title": "预试试卷",
+            "link": "UEC_Trial_Papers.html"
         }
     },
     "ms-my": {
@@ -27,6 +35,10 @@
         "UEC_Textbooks": {
             "title": "Buku Teks UEC",
             "link": "UEC_Textbooks.html"
+        },
+        "UEC_Trial_Papers": {
+            "title": "Kertas Ujian Percubaan UEC",
+            "link": "UEC_Trial_Papers.html"
         }
     },
     "en-gb": {
@@ -37,6 +49,10 @@
         "UEC_Textbooks": {
             "title": "UEC Textbooks",
             "link": "UEC_Textbooks.html"
+        },
+        "UEC_Trial_Papers": {
+            "title": "UEC Trial Papers",
+            "link": "UEC_Trial_Papers.html"
         }
     }
 }
