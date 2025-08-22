@@ -202,5 +202,23 @@
         "en-gb": "Catering Theories and Practices",
         "zh": "餐飲理論與實務",
         "zh-simp": "餐饮理论与实务"
+    },
+    "VY04": {
+        "ms-my": "Bahasa Inggeris untuk Industri",
+        "en-gb": "English for Industry",
+        "zh": "工業英文",
+        "zh-simp": "工业英文"
+    },
+    "VY14": {
+        "ms-my": "Penyelenggaraan Kereta",
+        "en-gb": "Vehicle Maintenance",
+        "zh": "汽車修護",
+        "zh-simp": "汽车修护"
+    },
+    "VY15": {
+        "ms-my": "Penyelenggaraan Kereta (Praktikal)",
+        "en-gb": "Vehicle Maintenance (Practical)",
+        "zh": "汽車修護 (實習)",
+        "zh-simp": "汽车修护 (实习)"
     }
 }
