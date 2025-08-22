@@ -1,0 +1,38 @@
+{
+  "zh": {
+    "subject": "科目",
+    "navbarTitle": "統考預試試卷收集站",
+    "navbarTitleSidebarActive": "獨中資訊處",
+    "desc": "按紙飛機 icon 即可打開 Google Form 上傳&emsp;|&emsp;之後會在這邊更新各校試卷的 link",
+    "jm": "初中",
+    "sm": "高中",
+    "v": "技術科"
+  },
+  "zh-simp": {
+    "subject": "科目",
+    "navbarTitle": "统考预试试卷收集站",
+    "navbarTitleSidebarActive": "独中资讯处",
+    "desc": "按纸飞机 icon 即可打开 Google Form 上传&emsp;|&emsp;之后会在这边更新各校试卷的 link",
+    "jm": "初中",
+    "sm": "高中",
+    "v": "技术科"
+  },
+  "ms-my": {
+    "subject": "Subjek",
+    "navbarTitle": "Pusat Pengumpulan Kertas Percubaan UEC",
+    "navbarTitleSidebarActive": "Laman Maklumat Sekolah Menengah Persendirian",
+    "desc": "Klik pada ikon kapal terbang kertas untuk membuka pautan Google Form dan memuat naik&emsp;|&emsp;Kertas percubaan sekolah masing-masing akan dikemas kini di sini nanti",
+    "jm": "Menengah Rendah",
+    "sm": "Menengah Atas",
+    "v": "Vokasional"
+  },
+  "en-gb": {
+    "subject": "Subject",
+    "navbarTitle": "UEC Trial Papers Collection Site",
+    "navbarTitleSidebarActive": "Independent High Schools Information Site",
+    "desc": "Click on the paper airplane icon to open Google Form upload link&emsp;|&emsp;Links to the trial papers from schools will be updated here later",
+    "jm": "Junior Middle",
+    "sm": "Senior Middle",
+    "v": "Vocational"
+  }
+}
