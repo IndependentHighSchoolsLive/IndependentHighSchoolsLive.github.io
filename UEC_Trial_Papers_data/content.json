@@ -1,38 +1,62 @@
 {
   "zh": {
     "subject": "科目",
+    "title": "統考預試試卷收集站",
     "navbarTitle": "統考預試試卷收集站",
     "navbarTitleSidebarActive": "獨中資訊處",
-    "desc": "按紙飛機 icon 即可打開 Google Form 上傳&emsp;|&emsp;之後會在這邊更新各校試卷的 link",
+    "desc_upload": "按紙飛機 icon 即可打開 Google Form 上傳&emsp;|&emsp;之後會在這邊更新各校試卷的 link",
+    "desc_download": "",
     "jm": "初中",
     "sm": "高中",
-    "v": "技術科"
+    "v": "技術科",
+    "toUpload": "上傳考卷",
+    "toDownload": "下載考卷",
+    "school": "學校",
+    "downloadLink": "Download Link"
   },
   "zh-simp": {
     "subject": "科目",
+    "title": "统考预试试卷收集站",
     "navbarTitle": "统考预试试卷收集站",
     "navbarTitleSidebarActive": "独中资讯处",
-    "desc": "按纸飞机 icon 即可打开 Google Form 上传&emsp;|&emsp;之后会在这边更新各校试卷的 link",
+    "desc_upload": "按纸飞机 icon 即可打开 Google Form 上传&emsp;|&emsp;之后会在这边更新各校试卷的 link",
+    "desc_download": "",
     "jm": "初中",
     "sm": "高中",
-    "v": "技术科"
+    "v": "技术科",
+    "toUpload": "上传考卷",
+    "toDownload": "下载考卷",
+    "school": "学校",
+    "downloadLink": "Download Link"
   },
   "ms-my": {
     "subject": "Subjek",
+    "title": "Pusat Pengumpulan Kertas Percubaan UEC",
     "navbarTitle": "Pusat Pengumpulan Kertas Percubaan UEC",
     "navbarTitleSidebarActive": "Laman Maklumat Sekolah Menengah Persendirian",
-    "desc": "Klik pada ikon kapal terbang kertas untuk membuka pautan Google Form dan memuat naik&emsp;|&emsp;Kertas percubaan sekolah masing-masing akan dikemas kini di sini nanti",
+    "desc_upload": "Klik pada ikon kapal terbang kertas untuk membuka pautan Google Form dan memuat naik&emsp;|&emsp;Kertas percubaan sekolah masing-masing akan dikemas kini di sini nanti",
+    "desc_download": "",
     "jm": "Menengah Rendah",
     "sm": "Menengah Atas",
-    "v": "Vokasional"
+    "v": "Vokasional",
+    "toUpload": "Muat Naik<br>Kertas Soalan",
+    "toDownload": "Muat Turun<br>Kertas Soalan",
+    "school": "Sekolah",
+    "downloadLink": "Download Link"
   },
   "en-gb": {
     "subject": "Subject",
+    "title": "UEC Trial Papers Collection Site",
     "navbarTitle": "UEC Trial Papers Collection Site",
     "navbarTitleSidebarActive": "Independent High Schools Information Site",
-    "desc": "Click on the paper airplane icon to open Google Form upload link&emsp;|&emsp;Links to the trial papers from schools will be updated here later",
+    "desc_upload": "Click on the paper airplane icon to open Google Form upload link&emsp;|&emsp;Links to the trial papers from schools will be updated here later",
+    "desc_download": "",
     "jm": "Junior Middle",
     "sm": "Senior Middle",
-    "v": "Vocational"
+    "v": "Vocational",
+    "toUpload": "Upload<br>Exam Papers",
+    "toDownload": "Download<br>Exam Papers",
+    "school": "School",
+    "downloadLink": "Download Link"
   }
 }

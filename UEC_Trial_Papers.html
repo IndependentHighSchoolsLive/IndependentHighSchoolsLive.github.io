@@ -132,6 +132,24 @@
             display: block;
         }
 
+        .reselect-btn {
+            position: fixed;
+            left: 17px;
+            z-index: 30;
+            background: #f1f1f1;
+            color: #333;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        body.dark-mode .reselect-btn {
+            background: #333;
+            color: #ddd;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -156,8 +174,38 @@
             border-radius: 8px;
         }
 
+        #up-download-div {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .up-download-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 220px;
+            height: 220px;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-decoration: none;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 600;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        body.dark-mode .up-download-button {
+            color: white;
+            border: 2px solid #666666;
+        }
+
         table {
-            width: 40%;
+            width: 67%;
             margin: 20px auto;
             border-collapse: separate;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -166,6 +214,13 @@
             overflow: hidden;
             border: 2px solid #fdfcfb;
             border-radius: 10px;
+        }
+
+        @media (min-width: 797px) {
+            table {
+                width: 37%;
+            }
+            
         }
 
         body.dark-mode table {
@@ -188,11 +243,26 @@
             text-align: center;
         }
 
-        th {
+        th, td {
             width:50%;
         }
-        td {
+        table {
+            table-layout: fixed;
+        }
+        
+        #download table thead th {
             width: 30%;
+        }
+
+        #download table tbody td {
+            width: 30%;
+        }
+
+        .sort-buttons {
+            display: inline-flex;
+            flex-direction: column;
+            margin-left: 8px;
+            cursor: pointer;
         }
 
         tbody tr:nth-child(odd) {
@@ -252,9 +322,21 @@
     </div>
     <br>
     <div class="content">
-        <div id="desc"></div>
+    <div id="up-download-div">
+        <a id="to-upload-a" class="up-download-button" onclick="actionOption('upload')">
+            <img id="to-upload-icon" alt="Upload" width="113px" height="113px">
+            <span id="to-upload-text"></span>
+        </a>
+        <a id="to-download-a" class="up-download-button" onclick="actionOption('download')">
+            <img id="to-download-icon" alt="Download" width="113px" height="113px">
+            <span id="to-download-text"></span>
+        </a>
+    </div>
+    <div id="upload" style="display: none;">
+        <button class="reselect-btn" onclick="backToSelection()"><img class="back-button-icon" alt="Back" width="23px" height="23px"></button>
+        <br><br>
+        <div id="desc-upload"></div>
         <br>
-    <div>
         <div class="junior-middle-title" style="text-align: center; font-size:1.3em"></div>
         <table class="junior-middle-send">
             <thead>
@@ -437,12 +519,77 @@
             </tbody>
         </table>
     </div>
+    <div id="download" style="visibility: hidden; display: none;">
+        <button class="reselect-btn" onclick="backToSelection()"><img class="back-button-icon" alt="Back" width="23px" height="23px"></button>
+        <br><br>
+        <div id="desc-download"></div>
+        <br>
+        <div class="junior-middle-title" style="text-align: center; font-size:1.3em"></div>
+        <table id="junior-middle-download">
+            <thead>
+                <tr>
+                    <th class="thead-subject-download">
+                        <span class="thead-subject-text" style="display: inline-block;"></span>
+                        <div id="sortbySubjects-junior" class="sort-buttons" onclick="sortTable(0)" style="vertical-align: sub; display: inline-block;"></div>
+                    </th>
+                    <th class="thead-school-download">
+                        <span class="thead-school-text" style="display: inline-block;"></span>
+                        <div id="sortbySchoolCodes-junior" class="sort-buttons" onclick="sortTable(1)" style="vertical-align: sub; display: inline-block;"></div>
+                    </th>
+                    <th class="thead-download-link"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <br>
+        <div class="senior-middle-title" style="text-align: center; font-size:1.3em"></div>
+        <table id="senior-middle-download">
+            <thead>
+                <tr>
+                    <th class="thead-subject-download">
+                        <span class="thead-subject-text" style="display: inline-block;"></span>
+                        <div id="sortbySubjects-senior" class="sort-buttons" onclick="sortTable(2)" style="vertical-align: sub; display: inline-block;"></div>
+                    </th>
+                    <th class="thead-school-download">
+                        <span class="thead-school-text" style="display: inline-block;"></span>
+                        <div id="sortbySchoolCodes-senior" class="sort-buttons" onclick="sortTable(3)" style="vertical-align: sub; display: inline-block;"></div>
+                    </th>
+                    <th class="thead-download-link"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <br><br>
+        <div class="senior-middle-vocational-title" style="text-align: center; font-size:1.3em"></div>
+        <table id="senior-middle-vocational-download">
+            <thead>
+                <tr>
+                    <th class="thead-subject-download">
+                        <span class="thead-subject-text" style="display: inline-block;"></span>
+                        <div id="sortbySubjects-vocational" class="sort-buttons" onclick="sortTable(4)" style="vertical-align: sub; display: inline-block;"></div>
+                    </th>
+                    <th class="thead-school-download">
+                        <span class="thead-school-text" style="display: inline-block;"></span>
+                        <div id="sortbySchoolCodes-vocational" class="sort-buttons" onclick="sortTable(5)" style="vertical-align: sub; display: inline-block;"></div>
+                    </th>
+                    <th class="thead-download-link"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
     </div>
     <script>
         let contentJSON = {};
         let webpageJSON = {};
         let schoolsJSON = {};
         let subjectJSON = {};
+        let exampapersJSON = {};
 
         document.querySelector('.hamburger').addEventListener('click', async function() {
             const sidebar = document.querySelector('.sidebar');
@@ -555,16 +702,63 @@
             document.querySelectorAll('.thead-subject').forEach(th => {
                 th.textContent = content.subject;
             });
+            document.querySelectorAll('.thead-subject-download .thead-subject-text').forEach(span => {
+                span.textContent = content.subject;
+            });
+            document.querySelectorAll('.thead-school-download .thead-school-text').forEach(span => {
+                span.textContent = content.school;
+            });
+            document.querySelectorAll('.thead-download-link').forEach(th => {
+                th.textContent = content.downloadLink;
+            });
+
             Object.keys(subjectJSON).forEach(element => {
                 const subjectString = subjectJSON[element][language];
-                console.log(subjectString);
-                document.getElementById(element).innerHTML = subjectString;
+                if (document.getElementById(element)) document.getElementById(element).innerHTML = subjectString;
             });
-            document.getElementById('desc').innerHTML = content.desc;
-            document.querySelector('.junior-middle-title').textContent = content.jm;
-            document.querySelector('.senior-middle-title').textContent = content.sm;
-            document.querySelector('.senior-middle-vocational-title').textContent = content.v;
+            document.getElementById('desc-upload').innerHTML = content.desc_upload;
+            document.getElementById('desc-download').innerHTML = content.desc_download;
+            document.querySelectorAll('.junior-middle-title').forEach(title => title.textContent = content.jm);
+            document.querySelectorAll('.senior-middle-title').forEach(title => title.textContent = content.sm);
+            document.querySelectorAll('.senior-middle-vocational-title').forEach(title => title.textContent = content.v);
+            document.getElementById('to-upload-text').innerHTML = content.toUpload;
+            document.getElementById('to-download-text').innerHTML = content.toDownload;
             loadContents(language, content);
+            positionOfReselectBtn();
+            Object.keys(exampapersJSON).forEach(key => {
+                const tbody = document.getElementById(`${key}-download`).querySelector('tbody');
+                tbody.innerHTML = '';
+                const examPapers = exampapersJSON[key];
+                examPapers.forEach(paperFile => {
+                    if (!paperFile) return;
+                    const tr = document.createElement('tr');
+                    let exampapersinfo = paperFile.split('_');
+
+                    let convertedLanguageCode
+                    if (language == "zh") convertedLanguageCode = "BC";
+                    else if (language == "zh-simp") convertedLanguageCode = "BC_Simplified";
+                    else convertedLanguageCode = "BM";
+                    const schoolName = schoolsJSON[exampapersinfo[0]][convertedLanguageCode];
+
+                    exampaperSubjectCode = exampapersinfo[1].split('-');
+                    const subjectName = subjectJSON[exampaperSubjectCode[0]][language];
+                    let paper = ""
+                    if (exampaperSubjectCode.length > 1) {
+                        if (language == "ms-my") paper = ` Kertas ${exampaperSubjectCode[1]}`;
+                        else if (language == "en") paper = ` Paper ${exampaperSubjectCode[1]}`;
+                        else if (language == "zh") paper = ` 試卷 ${exampaperSubjectCode[1]}`;
+                        else if (language == "zh-simp") paper = ` 试卷 ${exampaperSubjectCode[1]}`;
+                    }
+                    const link = `https://raw.githubusercontent.com/IndependentHighSchoolsLive/Examination-Papers/main/Files/${paperFile}.pdf`;
+                    const downloadIcon = mode === "dark" ? "download-dark.svg" : "download-light.svg";
+                    tr.innerHTML = `
+                        <th>${subjectName+paper}</th>
+                        <th>${schoolName}</th>
+                        <th><a href="${link}" target="_blank" rel="noopener noreferrer"><img class="to-download-icon" src="./img/${downloadIcon}" alt="Download" width="17px" height="17px"></a></th>
+                    `;
+                    tbody.appendChild(tr);
+                })
+            });
         }
 
 
@@ -581,6 +775,9 @@
                 document.body.classList.add('dark-mode');
                 document.querySelector('#modeButton img').src = "./img/moon-dark.svg";
                 document.querySelector('#languageButton img').src = "./img/languages-dark.svg";
+                document.querySelector('#to-upload-icon').src = "./img/upload-dark.svg";
+                document.querySelector('#to-download-icon').src = "./img/download-dark.svg";
+                document.querySelectorAll('.back-button-icon').forEach(icon => icon.src = "./img/return-back-dark.svg");
             } else {
                 document.body.style.backgroundColor = "#ffffff";
                 document.body.style.color = "#000000";
@@ -590,6 +787,9 @@
                 } else document.querySelector('#hamburger-menu img').src = "./img/hamburger-icon-light.svg";
                 document.querySelector('#modeButton img').src = "./img/sun-light.svg";
                 document.querySelector('#languageButton img').src = "./img/languages-light.svg";
+                document.querySelector('#to-upload-icon').src = "./img/upload-light.svg";
+                document.querySelector('#to-download-icon').src = "./img/download-light.svg";
+                document.querySelectorAll('.back-button-icon').forEach(icon => icon.src = "./img/return-back-light.svg");
             }
         }
         setMode(mode);
@@ -611,9 +811,123 @@
         window.addEventListener('load', async () => {
             contentJSON = await (await fetch('./UEC_Trial_Papers_data/content.json')).json();
             webpageJSON = await (await fetch('./webpage.json')).json();
+            schoolsJSON = await (await fetch('./homepage/schools.json')).json();
             subjectJSON = await (await fetch('./homepage/subjects.json')).json();
+            exampapersJSON = await (await fetch('./UEC_Trial_Papers_data/2025_UEC_Trials.json')).json();
             loadPageWithLanguage(page_language);
+            sortTable(0);
+            sortTable(2);
+            sortTable(4);
         });
+
+        let action = ""
+        function backToSelection() {
+            document.getElementById("upload").style.display = "none";
+            document.getElementById("download").style.display = "none";
+            document.getElementById("up-download-div").style.display = "flex";
+        }
+
+        function actionOption(action) {
+            if (action === "download") {
+                document.getElementById("download").style.display = "";
+                document.getElementById("download").style.visibility = "visible";
+                document.getElementById("upload").style.display = "none";
+                document.getElementById("up-download-div").style.display = "none";
+            } else if (action === "upload") {
+                document.getElementById("upload").style.display = "block";
+                document.getElementById("upload").style.visibility = "visible";
+                document.getElementById("download").style.display = "none";
+                document.getElementById("up-download-div").style.display = "none";
+            }
+        }
+
+        function positionOfReselectBtn() {
+           const navbar = document.querySelector('.navbar');
+            const reselectBtns = document.querySelectorAll('.reselect-btn');
+            if (navbar && reselectBtns.length > 0) {
+                const navbarRect = navbar.getBoundingClientRect();
+                const offset = 8; // pixels below navbar
+                reselectBtns.forEach(btn => {
+                    btn.style.top = (navbarRect.height + offset) + "px";
+                });
+            }
+        }
+
+        const tableOrder = {
+            "Subjects-junior": 0,
+            "SchoolCodes-junior": 0,
+            "Subjects-senior": 0,
+            "SchoolCodes-senior": 0,
+            "Subjects-vocational": 0,
+            "SchoolCodes-vocational": 0
+        }
+        function sortTable(columnIndex) {
+            let table = ""
+            if (columnIndex < 2) table = document.getElementById("junior-middle-download");
+            else if (columnIndex < 4) table = document.getElementById("senior-middle-download");
+            else table = document.getElementById("senior-middle-vocational-download");
+            const tableOrderKey = [ "Subjects-junior", "SchoolCodes-junior", "Subjects-senior", "SchoolCodes-senior", "Subjects-vocational", "SchoolCodes-vocational"];
+            let order = 0
+            Object.keys(tableOrder).forEach(key => {
+                if (key == tableOrderKey[columnIndex]) {
+                    if (tableOrder[key] == 1) {
+                        tableOrder[key] = -1;
+                    } else {
+                        tableOrder[key] = 1;
+                    }
+                    order = tableOrder[key];
+                    if (key == "") {
+                        if (order == 1) {
+                            document.getElementById(`sortby${key}`).innerHTML = `<img src="./img/sort-numeric-down-${mode}.svg" alt="Sort Ascending" style="width:1.3em;height:1.3em;">`;
+                        } else {
+                            document.getElementById(`sortby${key}`).innerHTML = `<img src="./img/sort-numeric-alt-up-${mode}.svg" alt="Sort Descending" style="width:1.3em;height:1.3em;">`;
+                        }
+                    } else {
+                        if (order == 1) {
+                            document.getElementById(`sortby${key}`).innerHTML = `<img src="./img/sort-alpha-down-${mode}.svg" alt="Sort Ascending" style="width:1.3em;height:1.3em;">`;
+                        } else {
+                            document.getElementById(`sortby${key}`).innerHTML = `<img src="./img/sort-alpha-alt-up-${mode}.svg" alt="Sort Descending" style="width:1.3em;height:1.3em;">`;
+                        }
+                    }
+                } else if (key.split('-')[1] == tableOrderKey[columnIndex].split('-')[1]) {
+                    tableOrder[key] = 0;
+                    document.getElementById(`sortby${key}`).innerHTML = `<img src="./img/sort-alt-${mode}.svg" alt="Click to Sort" style="width:1.3em;height:1.3em;">`;
+                }
+            });
+            if (columnIndex != 3) {
+                const tbody = table.tBodies[0];
+                const rowsArray = Array.from(tbody.querySelectorAll("tr"));
+
+                rowsArray.sort((a, b) => {
+                    const aText = a.children[columnIndex].innerText.trim();
+                    const bText = b.children[columnIndex].innerText.trim();
+
+                    if (order == 1) {
+                        return aText.localeCompare(bText);
+                    } else {
+                        return bText.localeCompare(aText);
+                    }
+                });
+                rowsArray.forEach(row => tbody.appendChild(row));
+
+            } else if (columnIndex == 3) {
+                const tbody = table.tBodies[0];
+                const rowsArray = Array.from(tbody.querySelectorAll("tr"));
+
+                rowsArray.sort((a, b) => {
+                    const aText = a.children[columnIndex].innerText.trim();
+                    const bText = b.children[columnIndex].innerText.trim();
+
+                    if (order == 1) {
+                        return aText - bText;
+                    } else {
+                        return bText - aText;
+                    }
+                });
+                rowsArray.forEach(row => tbody.appendChild(row));
+            }
+        }
+
     </script>
 </body>
 </html>

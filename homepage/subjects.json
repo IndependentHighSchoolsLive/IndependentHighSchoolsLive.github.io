@@ -23,11 +23,23 @@
         "zh": "數學",
         "zh-simp": "数学"
     },
+    "JE04": {
+        "ms-my": "Matematik (Inggeris)",
+        "en-gb": "Mathematics (English)",
+        "zh": "數學 (英文)",
+        "zh-simp": "数学 (英文)"
+    },
     "JC05": {
         "ms-my": "Sains",
         "en-gb": "Science",
         "zh": "科學",
         "zh-simp": "科学"
+    },
+    "JE05": {
+        "ms-my": "Sains (Inggeris)",
+        "en-gb": "Science (English)",
+        "zh": "科學 (英文)",
+        "zh-simp": "科学 (英文)"
     },
     "JY06": {
         "ms-my": "Sejarah",
@@ -71,11 +83,23 @@
         "zh": "數學",
         "zh-simp": "数学"
     },
+    "SE04": {
+        "ms-my": "Matematik (Inggeris)",
+        "en-gb": "Mathematics (English)",
+        "zh": "數學 (英文)",
+        "zh-simp": "数学 (英文)"
+    },
     "SC05": {
         "ms-my": "Matematik Lanjutan",
         "en-gb": "Advanced Mathematics",
         "zh": "高級數學",
         "zh-simp": "高级数学"
+    },
+    "SE05": {
+        "ms-my": "Matematik Lanjutan (Inggeris)",
+        "en-gb": "Advanced Mathematics (English)",
+        "zh": "高級數學 (英文)",
+        "zh-simp": "高级数学 (英文)"
     },
     "SC06": {
         "ms-my": "Matematik Lanjutan (I)",
@@ -83,11 +107,23 @@
         "zh": "高級數學 (I)",
         "zh-simp": "高级数学 (I)"
     },
+    "SE06": {
+        "ms-my": "Matematik Lanjutan (I) (Inggeris)",
+        "en-gb": "Advanced Mathematics (I) (English)",
+        "zh": "高級數學 (I) (英文)",
+        "zh-simp": "高级数学 (I) (英文)"
+    },
     "SC07": {
         "ms-my": "Matematik Lanjutan (II)",
         "en-gb": "Advanced Mathematics (II)",
         "zh": "高級數學 (II)",
         "zh-simp": "高级数学 (II)"
+    },
+    "SE07": {
+        "ms-my": "Matematik Lanjutan (II) (Inggeris)",
+        "en-gb": "Advanced Mathematics (II) (English)",
+        "zh": "高級數學 (II) (英文)",
+        "zh-simp": "高级数学 (II) (英文)"
     },
     "SY08": {
         "ms-my": "Sejarah",
@@ -107,11 +143,23 @@
         "zh": "生物",
         "zh-simp": "生物"
     },
+    "SE10": {
+        "ms-my": "Biologi (Inggeris)",
+        "en-gb": "Biology (English)",
+        "zh": "生物 (英文)",
+        "zh-simp": "生物 (英文)"
+    },
     "SC11": {
         "ms-my": "Kimia",
         "en-gb": "Chemistry",
         "zh": "化學",
         "zh-simp": "化学"
+    },
+    "SE11": {
+        "ms-my": "Kimia (Inggeris)",
+        "en-gb": "Chemistry (English)",
+        "zh": "化學 (英文)",
+        "zh-simp": "化学 (英文)"
     },
     "SC12": {
         "ms-my": "Fizik",
@@ -119,11 +167,23 @@
         "zh": "物理",
         "zh-simp": "物理"
     },
+    "SE12": {
+        "ms-my": "Fizik (Inggeris)",
+        "en-gb": "Physics (English)",
+        "zh": "物理 (英文)",
+        "zh-simp": "物理 (英文)"
+    },
     "SC14": {
         "ms-my": "Pengajian Perniagaan",
         "en-gb": "Business Studies",
         "zh": "商業學",
         "zh-simp": "商业学"
+    },
+    "SE14": {
+        "ms-my": "Pengajian Perniagaan (Inggeris)",
+        "en-gb": "Business Studies (English)",
+        "zh": "商業學 (英文)",
+        "zh-simp": "商业学 (英文)"
     },
     "SC15": {
         "ms-my": "Pembukuan dan Perakaunan",
@@ -131,11 +191,23 @@
         "zh": "簿記與會計",
         "zh-simp": "簿记与会计"
     },
+    "SE15": {
+        "ms-my": "Pembukuan dan Perakaunan (Inggeris)",
+        "en-gb": "Bookkeeping and Accounts (English)",
+        "zh": "簿記與會計 (英文)",
+        "zh-simp": "簿记与会计 (英文)"
+    },
     "SC16": {
         "ms-my": "Perakaunan",
         "en-gb": "Accounting",
         "zh": "會計",
         "zh-simp": "会计"
+    },
+    "SE16": {
+        "ms-my": "Perakaunan (Inggeris)",
+        "en-gb": "Accounting (English)",
+        "zh": "會計 (英文)",
+        "zh-simp": "会计 (英文)"
     },
     "SY17": {
         "ms-my": "Ekonomi",
