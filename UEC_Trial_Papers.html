@@ -900,13 +900,13 @@
                     document.getElementById(`sortby${key}`).innerHTML = `<img src="./img/sort-alt-${mode}.svg" alt="Click to Sort" style="width:1.3em;height:1.3em;">`;
                 }
             });
-            if (columnIndex != 3) {
+            //if (columnIndex)  {
                 const tbody = table.tBodies[0];
                 const rowsArray = Array.from(tbody.querySelectorAll("tr"));
 
                 rowsArray.sort((a, b) => {
-                    const aText = a.children[columnIndex].innerText.trim();
-                    const bText = b.children[columnIndex].innerText.trim();
+                    const aText = a.children[columnIndex%2].innerText.trim();
+                    const bText = b.children[columnIndex%2].innerText.trim();
 
                     if (order == 1) {
                         return aText.localeCompare(bText);
@@ -916,7 +916,7 @@
                 });
                 rowsArray.forEach(row => tbody.appendChild(row));
 
-            } else if (columnIndex == 3) {
+            /*} else if (columnIndex == 3) {
                 const tbody = table.tBodies[0];
                 const rowsArray = Array.from(tbody.querySelectorAll("tr"));
 
@@ -931,7 +931,7 @@
                     }
                 });
                 rowsArray.forEach(row => tbody.appendChild(row));
-            }
+            }*/
         }
 
     </script>
