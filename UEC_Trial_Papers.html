@@ -324,11 +324,11 @@
     <div class="content">
     <div id="up-download-div">
         <a id="to-upload-a" class="up-download-button" onclick="actionOption('upload')">
-            <img id="to-upload-icon" alt="Upload" width="113px" height="113px">
+            <img class="to-upload-icon" alt="Upload" width="113px" height="113px">
             <span id="to-upload-text"></span>
         </a>
         <a id="to-download-a" class="up-download-button" onclick="actionOption('download')">
-            <img id="to-download-icon" alt="Download" width="113px" height="113px">
+            <img class="to-download-icon" alt="Download" width="113px" height="113px">
             <span id="to-download-text"></span>
         </a>
     </div>
@@ -781,8 +781,8 @@
                 document.body.classList.add('dark-mode');
                 document.querySelector('#modeButton img').src = "./img/moon-dark.svg";
                 document.querySelector('#languageButton img').src = "./img/languages-dark.svg";
-                document.querySelector('#to-upload-icon').src = "./img/upload-dark.svg";
-                document.querySelector('#to-download-icon').src = "./img/download-dark.svg";
+                document.querySelector('.to-upload-icon').src = "./img/upload-dark.svg";
+                document.querySelector('.to-download-icon').src = "./img/download-dark.svg";
                 document.querySelectorAll('.back-button-icon').forEach(icon => icon.src = "./img/return-back-dark.svg");
             } else {
                 document.body.style.backgroundColor = "#ffffff";
@@ -793,8 +793,8 @@
                 } else document.querySelector('#hamburger-menu img').src = "./img/hamburger-icon-light.svg";
                 document.querySelector('#modeButton img').src = "./img/sun-light.svg";
                 document.querySelector('#languageButton img').src = "./img/languages-light.svg";
-                document.querySelector('#to-upload-icon').src = "./img/upload-light.svg";
-                document.querySelector('#to-download-icon').src = "./img/download-light.svg";
+                document.querySelector('.to-upload-icon').src = "./img/upload-light.svg";
+                document.querySelector('.to-download-icon').src = "./img/download-light.svg";
                 document.querySelectorAll('.back-button-icon').forEach(icon => icon.src = "./img/return-back-light.svg");
             }
         }
