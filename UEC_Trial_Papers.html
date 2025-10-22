@@ -340,6 +340,8 @@
         <br><br>
         <div id="desc-upload"></div>
         <br>
+        <div id="desc_upload_any" style="font-size: 1.7em;"></div>
+        <br>
         <div class="junior-middle-title" style="text-align: center; font-size:1.3em"></div>
         <table class="junior-middle-send">
             <thead>
@@ -721,6 +723,7 @@
                 if (document.getElementById(element)) document.getElementById(element).innerHTML = subjectString;
             });
             document.getElementById('desc-upload').innerHTML = content.desc_upload;
+            document.getElementById('desc_upload_any').innerHTML = content.desc_upload_any;
             document.getElementById('desc-download').innerHTML = content.desc_download;
             document.querySelectorAll('.junior-middle-title').forEach(title => title.textContent = content.jm);
             document.querySelectorAll('.senior-middle-title').forEach(title => title.textContent = content.sm);
