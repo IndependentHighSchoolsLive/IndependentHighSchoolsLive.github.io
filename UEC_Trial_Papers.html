@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>14 樓</title>
     <style>
+        .root {
+            --sidebar-width: 231px;
+            --reselect-left: 17px;
+        }
+
         .navbar {
             display: flex;
             align-items: center;
@@ -30,11 +35,6 @@
         }
         .hamburger img {
             transition: all 0.3s;
-        }
-
-        .navbar #webpage-title {
-            visibility: hidden;
-            display: flex;
         }
 
         .navbar-title {
@@ -148,6 +148,9 @@
         body.dark-mode .reselect-btn {
             background: #333;
             color: #ddd;
+        }
+        .content.sidebar-active .reselect-btn {
+            left: calc(var(--reselect-left) + var(--sidebar-width));
         }
 
         body {
@@ -300,7 +303,7 @@
         <button id="hamburger-menu" class="hamburger"><img src="./img/hamburger-icon-light.svg" alt="Menu" width="36em" height="36em"></button>
         <h2 id="navbar-title" style="z-index: 20;"></h2>
         <div class="site-preferences">
-            <h3 id="webpage-title"></h3>
+            <h3 id="webpage-title" style="display: none;"></h3>
             <button id="modeButton" onclick="toggleMode()">
                 <img src="./img/sun-light.svg" alt="Dark Mode">
             </button>
@@ -611,7 +614,7 @@
                 } else {
                     hamburgerIcon.src = './img/hamburger-viewing-light.svg';
                 }
-                document.querySelector('#webpage-title').style.visibility = 'visible';
+                document.querySelector('#webpage-title').style.display = 'inline';
                 document.querySelector('#navbar-title').textContent = content.navbarTitleSidebarActive;
             } else {
                 if (document.body.classList.contains('dark-mode')) {
@@ -619,9 +622,10 @@
                 } else {
                     hamburgerIcon.src = './img/hamburger-icon-light.svg';
                 }
-                document.querySelector('#webpage-title').style.visibility = 'hidden';
+                document.querySelector('#webpage-title').style.display = 'none';
                 document.querySelector('#navbar-title').textContent = content.navbarTitle;
             }
+            positionOfReselectBtn()
         });
 
         function closePopup() {
@@ -782,7 +786,7 @@
                 document.querySelector('#modeButton img').src = "./img/moon-dark.svg";
                 document.querySelector('#languageButton img').src = "./img/languages-dark.svg";
                 document.querySelector('.to-upload-icon').src = "./img/upload-dark.svg";
-                document.querySelector('.to-download-icon').src = "./img/download-dark.svg";
+                document.querySelectorAll('.to-download-icon').forEach(icon => icon.src = "./img/download-dark.svg");
                 document.querySelectorAll('.back-button-icon').forEach(icon => icon.src = "./img/return-back-dark.svg");
             } else {
                 document.body.style.backgroundColor = "#ffffff";
@@ -794,7 +798,7 @@
                 document.querySelector('#modeButton img').src = "./img/sun-light.svg";
                 document.querySelector('#languageButton img').src = "./img/languages-light.svg";
                 document.querySelector('.to-upload-icon').src = "./img/upload-light.svg";
-                document.querySelector('.to-download-icon').src = "./img/download-light.svg";
+                document.querySelectorAll('.to-download-icon').forEach(icon => icon.src = "./img/download-light.svg");
                 document.querySelectorAll('.back-button-icon').forEach(icon => icon.src = "./img/return-back-light.svg");
             }
         }
@@ -933,6 +937,19 @@
                 rowsArray.forEach(row => tbody.appendChild(row));
             }*/
         }
+
+        let resizeTimeout;
+        let lastWidth = window.innerWidth;
+
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                if (Math.abs(window.innerWidth - lastWidth) >= 20) {
+                    positionOfReselectBtn();
+                    lastWidth = window.innerWidth;
+                }
+            }, 100);
+        });
 
     </script>
 </body>
