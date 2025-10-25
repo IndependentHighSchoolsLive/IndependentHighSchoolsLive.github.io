@@ -752,13 +752,19 @@
                     let paper = ""
                     if (exampaperSubjectCode.length > 1) {
                         if (language == "ms-my") paper = ` Kertas ${exampaperSubjectCode[1]}`;
-                        else if (language == "en") paper = ` Paper ${exampaperSubjectCode[1]}`;
+                        else if (language == "en-gb") paper = ` Paper ${exampaperSubjectCode[1]}`;
                         else if (language == "zh") paper = ` 試卷 ${exampaperSubjectCode[1]}`;
                         else if (language == "zh-simp") paper = ` 试卷 ${exampaperSubjectCode[1]}`;
                     }
                     if (exampapersinfo[3].includes('A')) {
+                        if (exampapersinfo[3].includes('Q')) {
+                            if (language == "ms-my") paper += ` dengan Jawapan`;
+                            else if (language == "en-gb") paper += ` with Answer`;
+                            else if (language == "zh") paper += ` 及答案`;
+                            else if (language == "zh-simp") paper += ` 及答案`;
+                        } else
                         if (language == "ms-my") paper += ` (Jawapan)`;
-                        else if (language == "en") paper += ` (Answer)`;
+                        else if (language == "en-gb") paper += ` (Answer)`;
                         else if (language == "zh") paper += ` 答案`;
                         else if (language == "zh-simp") paper += ` 答案`;
                     }
