@@ -394,7 +394,7 @@
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm2_malayB_2008.pdf"
       },
       {
-        "id": "jm2_malay_2023",
+        "id": "jm2_malay_2024",
         "title": {
           "zh": "初二《馬來西亞文》",
           "zh-simp": "初二《马来西亚文》",
@@ -470,6 +470,32 @@
         "page": 240,
         "size": 71316055,
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm2_scienceB_2015.pdf"
+      },
+      {
+        "id": "jm2_scienceA_2025",
+        "title": {
+          "zh": "《科學》初二上冊",
+          "zh-simp": "《科学》初二上册",
+          "en-gb": "Junior Middle Two Science Volume 1",
+          "ms-my": "Sains Menengah Rendah Dua Jilid 1"
+        },
+        "subject": "science",
+        "page": 0,
+        "size": 0,
+        "dl_link": ""
+      },
+      {
+        "id": "jm2_scienceB_2025",
+        "title": {
+          "zh": "《科學》初二下冊",
+          "zh-simp": "《科学》初二下册",
+          "en-gb": "Junior Middle Two Science Volume 2",
+          "ms-my": "Sains Menengah Rendah Dua Jilid 2"
+        },
+        "subject": "science",
+        "page": 0,
+        "size": 0,
+        "dl_link": ""
       }
     ]
   },
@@ -601,6 +627,18 @@
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm3_malayB_2009.pdf"
       },
       {
+        "id": "jm3_malay_2025",
+        "title": {
+          "zh": "初三《馬來西亞文》",
+          "zh-simp": "初三《马来西亚文》",
+          "en-gb": "Malay Junior Middle Three",
+          "ms-my": "Bahasa Malaysia Menengah Rendah Tiga"
+        },
+        "subject": "malay",
+        "page": 0,
+        "size": 0
+      },
+      {
         "id": "jm3_mathsA_2018",
         "title": {
           "zh": "《數學》初三上冊",
@@ -622,8 +660,9 @@
           "ms-my": "Matematik Menengah Rendah Tiga Jilid 2"
         },
         "subject": "maths",
-        "page": 0,
-        "size": 0
+        "page": 175,
+        "size": 38991830,
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm3_mathsB_2018.pdf"
       },
       {
         "id": "jm3_music_2017",
@@ -636,6 +675,7 @@
         "subject": "music",
         "page": 131,
         "size": 45515168,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm3_music_2017.pdf"
       },
       {
@@ -647,16 +687,17 @@
           "ms-my": "Sains Menengah Rendah Tiga Jilid 1"
         },
         "subject": "science",
-        "page": 0,
-        "size": 0
+        "page": 214,
+        "size": 118026111,
+        "dl_link": "https://drive.usercontent.google.com/download?id=1jCDfnxxRsZL7Ue6ei3beHqFEYkkoGIJ0&export=download&confirm=t"
       },
       {
         "id": "jm3_scienceB_2015",
         "title": {
           "zh": "《科學》初三下冊",
           "zh-simp": "《科学》初三下册",
-          "en-gb": "Junior Middle Two Science Volume 3",
-          "ms-my": "Sains Menengah Rendah Dua Jilid 3"
+          "en-gb": "Junior Middle Three Science Volume 2",
+          "ms-my": "Sains Menengah Rendah Tiga Jilid 2"
         },
         "subject": "science",
         "page": 245,
@@ -714,6 +755,19 @@
         "dl_link": "https://drive.usercontent.google.com/download?id=17SVLB3WBt5ZoxCOvC48Yww3zv8Tuqjpf&export=download&confirm=t"
       },
       {
+        "id": "sm_arts_2025",
+        "title": {
+          "zh": "高中《美術》",
+          "zh-simp": "高中《美术》",
+          "en-gb": "Senior Middle Arts",
+          "ms-my": "Seni Menengah Tinggi"
+        },
+        "subject": "arts",
+        "page": 0,
+        "size": 0,
+        "dl_link": ""
+      },
+      {
         "id": "sm_economicsA_2014",
         "title": {
           "zh": "高中《經濟學》上冊",
@@ -738,6 +792,31 @@
         "page": 278,
         "size": 121025554,
         "dl_link": "https://drive.usercontent.google.com/download?id=1mf8dH8iLqVM_y0NoasI_jESWDwiy2Q37&export=download&confirm=t"
+      },
+      {
+        "id": "sm_economicsA_2023",
+        "title": {
+          "zh": "高中《經濟學》第一冊",
+          "zh-simp": "高中《经济学》第一册",
+          "en-gb": "S.M. Economics Volume 1",
+          "ms-my": "Ekonomi Menengah Tinggi Jilid 1"
+        },
+        "subject": "economics",
+        "page": 284,
+        "size": 154911101,
+        "dl_link": "https://drive.usercontent.google.com/download?id=1KQ_wbm424cpoAqIivcf8p3jKAzZIcA62&export=download&confirm=t"
+      },
+      {
+        "id": "sm_economicsB_2024",
+        "title": {
+          "zh": "高中《經濟學》第二冊",
+          "zh-simp": "高中《经济学》第二册",
+          "en-gb": "S.M. Economics Volume 2",
+          "ms-my": "Ekonomi Menengah Tinggi Jilid 2"
+        },
+        "subject": "economics",
+        "page": 0,
+        "size": 0
       },
       {
         "id": "sm_geo_human_2018",
@@ -986,19 +1065,6 @@
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_chineseB_2012.pdf"
       },
       {
-        "id": "sm1_economics_2023",
-        "title": {
-          "zh": "高中《經濟學》第一冊",
-          "zh-simp": "高中《经济学》第一册",
-          "en-gb": "S.M. Economics Volume 1",
-          "ms-my": "Ekonomi Menengah Tinggi Jilid 1"
-        },
-        "subject": "economics",
-        "page": 284,
-        "size": 154911101,
-        "dl_link": "https://drive.usercontent.google.com/download?id=1KQ_wbm424cpoAqIivcf8p3jKAzZIcA62&export=download&confirm=t"
-      },
-      {
         "id": "sm1_english_2021",
         "title": {
           "zh": "高一《英文》",
@@ -1062,6 +1128,32 @@
         "page": 181,
         "size": 33278883,
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_mathsB_2013.pdf"
+      },
+            {
+        "id": "sm1_mathsA_2025",
+        "title": {
+          "zh": "高中數學（一上）",
+          "zh-simp": "高中数学（一上）",
+          "en-gb": "Senior Middle One Mathematics Volume 1",
+          "ms-my": "Matematik Menengah Tinggi Satu Jilid 1"
+        },
+        "subject": "maths",
+        "page": 0,
+        "size": 0,
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_mathsA_2025.pdf"
+      },
+      {
+        "id": "sm1_mathsB_2025",
+        "title": {
+          "zh": "高中數學（一下）",
+          "zh-simp": "高中数学（一下）",
+          "en-gb": "Senior Middle One Mathematics Volume 2",
+          "ms-my": "Matematik Menengah Tinggi Satu Jilid 2"
+        },
+        "subject": "maths",
+        "page": 0,
+        "size": 0,
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_mathsB_2025.pdf"
       },
       {
         "id": "sm1_advmathsA_1994",
@@ -1256,18 +1348,6 @@
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm2_chineseB_2013.pdf"
       },
       {
-        "id": "sm2_economics_2024",
-        "title": {
-          "zh": "高中《經濟學》第二冊",
-          "zh-simp": "高中《经济学》第二册",
-          "en-gb": "S.M. Economics Volume 2",
-          "ms-my": "Ekonomi Menengah Tinggi Jilid 2"
-        },
-        "subject": "economics",
-        "page": 0,
-        "size": 0
-      },
-      {
         "id": "sm2_english_2012",
         "title": {
           "zh": "高中《英語》第二冊",
@@ -1278,6 +1358,7 @@
         "subject": "english",
         "page": 349,
         "size": 132134815,
+        "status": "superseded",
         "dl_link": "https://drive.usercontent.google.com/download?id=1APG-y2WyWeCMvu8pEFwbd6X2AnbZfVR8&export=download&confirm=t"
       },
       {
@@ -1292,6 +1373,19 @@
         "page": 203,
         "size": 56274507,
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm2_english_2022.pdf"
+      },
+      {
+        "id": "sm2_it_2025",
+        "title": {
+          "zh": "高中《資訊科技》第二冊",
+          "zh-simp": "高中《资讯科技》第二册",
+          "en-gb": "S.M. Information Technology Volume 2",
+          "ms-my": "Teknologi Maklumat Menengah Tinggi Jilid 2"
+        },
+        "subject": "it",
+        "page": 0,
+        "size": 0,
+        "dl_link": ""
       },
       {
         "id": "sm2_malay_2017",
@@ -1380,8 +1474,9 @@
           "ms-my": "Matematik Lanjutan Menengah Tinggi Dua Jilid 2"
         },
         "subject": "advmaths",
-        "page": 0,
-        "size": 0
+        "page": 321,
+        "size": 105840420,
+        "dl_link": "https://drive.usercontent.google.com/download?11Z58jSlYFVG-e4Q-s8vg23xmQ7VicCPh&export=download&confirm=t"
       },
       {
         "id": "sm2_physics_2018",
@@ -1407,6 +1502,18 @@
       "ms-my": "Menengah Tinggi 3"
     },
     "items":[
+      {
+        "id": "sm3_accounting_reference_book_2025",
+        "title": {
+          "zh": "高中《會計學參考書》第三冊",
+          "zh-simp": "高中《会计学参考书》第三册",
+          "en-gb": "Senior Middle Accounting Reference Book Volume 3",
+          "ms-my": "Buku Rujukan Perakaunan Menengah Tinggi Jilid 3"
+        },
+        "subject": "accounting",
+        "page": 0,
+        "size": 0
+      },
       {
         "id": "sm3_artsap_2022",
         "title": {
@@ -1459,6 +1566,19 @@
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm3_business_studies_2015.pdf"
       },
       {
+        "id": "sm3_business_studies_2025",
+        "title": {
+          "zh": "高中《商業學》第三冊",
+          "zh-simp": "高中《商业学》第三册",
+          "en-gb": "Senior Middle Business Studies Volume 3",
+          "ms-my": "Perniagaan Menengah Tinggi Jilid 3"
+        },
+        "subject": "business",
+        "page": 0,
+        "size": 0,
+        "dl_link": ""
+      },
+      {
         "id": "sm3_chemistry_2019",
         "title": {
           "zh": "高中《化學》第三冊",
@@ -1508,6 +1628,7 @@
         "subject": "english",
         "page": 353,
         "size": 84583925,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm3_english_2013.pdf"
       },
       {
@@ -1587,6 +1708,32 @@
         "page": 99,
         "size": 25666493,
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm3_advmathsB_199x.pdf"
+      },
+            {
+        "id": "sm3_advmathsA_2025",
+        "title": {
+          "zh": "高三《高級數學》上冊",
+          "zh-simp": "高三《高级数学》上册",
+          "en-gb": "S.M. 3 Advanced Mathematics Volume 1",
+          "ms-my": "Matematik Lanjutan Menengah Tinggi Tiga Jilid 1"
+        },
+        "subject": "advmaths",
+        "page": 0,
+        "size": 0,
+        "dl_link": ""
+      },
+      {
+        "id": "sm3_advmathsB_2025",
+        "title": {
+          "zh": "高三《高級數學》下冊",
+          "zh-simp": "高三《高级数学》下册",
+          "en-gb": "S.M. 3 Advanced Mathematics Volume 2",
+          "ms-my": "Matematik Lanjutan Menengah Tinggi Tiga Jilid 2"
+        },
+        "subject": "advmaths",
+        "page": 0,
+        "size": 0,
+        "dl_link": ""
       },
       {
         "id": "sm3_physics_2020",
