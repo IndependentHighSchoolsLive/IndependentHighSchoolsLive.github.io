@@ -58,7 +58,7 @@
         "subject": "music",
         "page": 166,
         "size": 50729665,
-        "dl_link": "https://drive.usercontent.google.com/download?id=1REJyR3k8_jrVQklX8KjdrWHq66AEmXI5&export=download&confirm=t"
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm_music_intro_2012.pdf"
       }
     ]
   },
@@ -82,7 +82,7 @@
         "subject": "arts",
         "page": 100,
         "size": 67167441,
-        "dl_link": "https://drive.usercontent.google.com/download?id=1Yo0qdZlpb_-O0rpVbgH4gL8lHSzNuaPA&export=download&confirm=t"
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm1_arts_2019.pdf"
       },
       {
         "id": "jm1_chineseA_2019",
@@ -635,8 +635,9 @@
           "ms-my": "Bahasa Malaysia Menengah Rendah Tiga"
         },
         "subject": "malay",
-        "page": 0,
-        "size": 0
+        "page": 292,
+        "size": 127895849,
+        "dl_link": "https://drive.usercontent.google.com/download?1y_KLVUZ2xLAEwgb2o619K-Ow763UFkyA&export=download&confirm=t"
       },
       {
         "id": "jm3_mathsA_2018",
