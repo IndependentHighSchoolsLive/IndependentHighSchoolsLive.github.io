@@ -1132,8 +1132,8 @@
             {
         "id": "sm1_mathsA_2025",
         "title": {
-          "zh": "高中數學（一上）",
-          "zh-simp": "高中数学（一上）",
+          "zh": "高中《數學》上冊",
+          "zh-simp": "高中《数学》上册",
           "en-gb": "Senior Middle One Mathematics Volume 1",
           "ms-my": "Matematik Menengah Tinggi Satu Jilid 1"
         },
@@ -1145,14 +1145,14 @@
       {
         "id": "sm1_mathsB_2025",
         "title": {
-          "zh": "高中數學（一下）",
-          "zh-simp": "高中数学（一下）",
+          "zh": "高中《數學》下冊",
+          "zh-simp": "高中《数学》下册",
           "en-gb": "Senior Middle One Mathematics Volume 2",
           "ms-my": "Matematik Menengah Tinggi Satu Jilid 2"
         },
         "subject": "maths",
-        "page": 0,
-        "size": 0,
+        "page": 142,
+        "size": 41066812,
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_mathsB_2025.pdf"
       },
       {

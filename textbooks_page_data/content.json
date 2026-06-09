@@ -31,6 +31,7 @@
     "formButton": "年級",
     "subjectButton": "科目",
     "selectAll": " 全選",
+    "lastUpdated": "最後更新於 ",
     "pages": "頁數",
     "size": "文件大小",
     "grade": {
@@ -96,6 +97,7 @@
     "formButton": "年级",
     "subjectButton": "科目",
     "selectAll": " 全选",
+    "lastUpdated": "最后更新于 ",
     "pages": "页数",
     "size": "文件大小",
     "grade": {
@@ -171,6 +173,7 @@
     "formButton": "Tingkatan",
     "subjectButton": "Subjek",
     "selectAll": " Pilih Semua",
+    "lastUpdated": "Dikemas kini pada ",
     "pages": "Muka Surat",
     "size": "Saiz",
     "grade": {
@@ -244,6 +247,7 @@
     "formButton": "Grade",
     "subjectButton": "Subject",
     "selectAll": " Select All",
+    "lastUpdated": "Last updated on ",
     "pages": "Pages",
     "size": "Size",
     "grade": {
