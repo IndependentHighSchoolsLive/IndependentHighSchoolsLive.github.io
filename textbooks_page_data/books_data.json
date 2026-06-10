@@ -32,7 +32,7 @@
         "subject": "it",
         "page": 204,
         "size": 104614027,
-        "dl_link": "https://drive.usercontent.google.com/download?id=1C_Y7OV5fPHBYPK83lTZrj_L4aFmlo4nt&export=download&confirm=t"
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm_IT_B_2016.pdf"
       },
       {
         "id": "jm_music_2023",
@@ -134,7 +134,7 @@
         "subject": "geography",
         "page": 168,
         "size": 94087934,
-        "dl_link": "https://drive.usercontent.google.com/download?id=1gHP1NSI_xLgrqI26k4QzdCwq7aF_7u2F&export=download&confirm=t"
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm1_geography_2008.pdf"
       },     
       {
         "id": "jm1_history_2022",
@@ -147,7 +147,7 @@
         "subject": "history",
         "page": 262,
         "size": 83098177,
-        "dl_link": "https://drive.usercontent.google.com/download?id=1Gd9xk2cTQcz_Xmi8dhorCLKyWt2JHhwN&export=download&confirm=t"
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm1_history_2022.pdf"
       },
       {
         "id": "jm1_malayA_2006",
@@ -160,7 +160,8 @@
         "subject": "malay",
         "page": 181,
         "size": 66464421,
-        "dl_link": "https://drive.usercontent.google.com/download?id=1mtJmptg3a6Fnika7pld1EaNETU_E9kcz&export=download&confirm=t"
+        "status": "superseded",
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm1_malayA_2006.pdf"
       },
       {
         "id": "jm1_malayB_2007",
@@ -173,7 +174,8 @@
         "subject": "malay",
         "page": 224,
         "size": 96003547,
-        "dl_link": "https://drive.usercontent.google.com/download?id=1OZVV_ufQttFZIkjqhXhW8gxdKEWWJ46S&export=download&confirm=t"
+        "status": "superseded",
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm1_malayB_2007.pdf"
       },
       {
         "id": "jm1_malay_2023",
@@ -186,7 +188,7 @@
         "subject": "malay",
         "page": 254,
         "size": 71099473,
-        "dl_link": "https://drive.usercontent.google.com/download?id=1JJYSj8fWOqcrYHEgcT44sDFAa1jOQ4ey&export=download&confirm=t"
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm1_malay_2023.pdf"
       },
       {
         "id": "jm1_mathsA_2016",
@@ -199,7 +201,7 @@
         "subject": "maths",
         "page": 290,
         "size": 48263582,
-        "dl_link": "https://drive.usercontent.google.com/download?id=1GVcWXlvfTlN_Q7q1b3qsW-SduoG3MWES&export=download&confirm=t"
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm1_mathsA_2016.pdf"
       },
       {
         "id": "jm1_mathsB_2016",
@@ -212,7 +214,7 @@
         "subject": "maths",
         "page": 222,
         "size": 33344019,
-        "dl_link": "https://drive.usercontent.google.com/download?id=16-FpzMvhCOTnJPTnc5_iA3fXXu-bSQBZ&export=download&confirm=t"
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm1_mathsB_2016.pdf"
       },
       {
         "id": "jm1_music_2015",
@@ -378,6 +380,7 @@
         "subject": "malay",
         "page": 192,
         "size": 68028576,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm2_malayA_2007.pdf"
       },
       {
@@ -391,6 +394,7 @@
         "subject": "malay",
         "page": 183,
         "size": 58819652,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm2_malayB_2008.pdf"
       },
       {
@@ -611,6 +615,7 @@
         "subject": "malay",
         "page": 167,
         "size": 54415511,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm3_malayA_2008.pdf"
       },
       {
@@ -624,6 +629,7 @@
         "subject": "malay",
         "page": 158,
         "size": 54915531,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/jm3_malayB_2009.pdf"
       },
       {
@@ -1133,8 +1139,8 @@
             {
         "id": "sm1_mathsA_2025",
         "title": {
-          "zh": "高中《數學》上冊",
-          "zh-simp": "高中《数学》上册",
+          "zh": "高一《數學》上冊",
+          "zh-simp": "高一《数学》上册",
           "en-gb": "Senior Middle One Mathematics Volume 1",
           "ms-my": "Matematik Menengah Tinggi Satu Jilid 1"
         },
@@ -1146,8 +1152,8 @@
       {
         "id": "sm1_mathsB_2025",
         "title": {
-          "zh": "高中《數學》下冊",
-          "zh-simp": "高中《数学》下册",
+          "zh": "高一《數學》下冊",
+          "zh-simp": "高一《数学》下册",
           "en-gb": "Senior Middle One Mathematics Volume 2",
           "ms-my": "Matematik Menengah Tinggi Satu Jilid 2"
         },
