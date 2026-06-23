@@ -44,6 +44,7 @@
       "sm2": " 高二",
       "sm3": " 高三"
     },
+    "supersededBooks": "舊課綱課本",
     "subject": {
       "malay": " 馬來西亞文",
       "english": " 英文",
@@ -110,6 +111,7 @@
       "sm2": " 高二",
       "sm3": " 高三"
     },
+    "supersededBooks": "旧课纲课本",
     "subject": {
       "malay": " 马来西亚文",
       "english": " 英文",
@@ -186,6 +188,7 @@
       "sm2": " Tingkatan 5",
       "sm3": " Tingkatan 6"
     },
+    "supersededBooks": "Buku Sukatan Pelajaran Lama",
     "subject": {
       "malay": " Bahasa Melayu",
       "english": " Bahasa Inggeris",
@@ -260,6 +263,7 @@
       "sm2": " Senior 2",
       "sm3": " Senior 3"
     },
+    "supersededBooks": "Old Syllabus Books",
     "subject": {
       "malay": " Malay",
       "english": " English",
