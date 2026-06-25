@@ -54,6 +54,7 @@
       "history": " 歷史",
       "geography": " 地理",
       "arts": " 美術",
+      "artsap": "美術賞析",
       "music": " 音樂",
       "it": " 電腦與資訊工藝",
       "economics": " 經濟學",
@@ -63,7 +64,9 @@
       "chemistry": " 化學",
       "physics": " 物理",
       "advmaths": " 高級數學",
-      "bookkeeping_accounts": " 簿記與會計"
+      "bookkeeping_accounts": " 簿記與會計",
+      "graphic_design": " 平面設計",
+      "electronics": " 電子學"
     }
   },
   "zh-simp": {
@@ -121,6 +124,7 @@
       "history": " 历史",
       "geography": " 地理",
       "arts": " 美术",
+      "artsap": "美术赏析",
       "music": " 音乐",
       "it": " 电脑与资讯工艺",
       "economics": " 经济学",
@@ -130,7 +134,9 @@
       "chemistry": " 化学",
       "physics": " 物理",
       "advmaths": " 高级数学",
-      "bookkeeping_accounts": " 簿记与会计"
+      "bookkeeping_accounts": " 簿记与会计",
+      "graphic_design": " 平面设计",
+      "electronics": " 电子学"
     }
   },
   "ms-my": {
@@ -198,6 +204,7 @@
       "history": " Sejarah",
       "geography": " Geografi",
       "arts": " Seni",
+      "artsap": "Apresiasi Seni Visual",
       "music": " Muzik",
       "it": " Teknologi Maklumat",
       "economics": " Ekonomi",
@@ -207,7 +214,9 @@
       "chemistry": " Kimia",
       "physics": " Fizik",
       "advmaths": " Matematik Lanjutan",
-      "bookkeeping_accounts": " Pembukuan dan Perakaunan"
+      "bookkeeping_accounts": " Pembukuan dan Perakaunan",
+      "graphic_design": " Reka Bentuk Grafik",
+      "electronics": " Elektronik"
     }
   },
   "en-gb": {
@@ -273,6 +282,7 @@
       "history": " History",
       "geography": " Geography",
       "arts": " Arts",
+      "artsap": "Arts Appreciation",
       "music": " Music",
       "it": " Information Technology",
       "economics": " Economics",
@@ -282,7 +292,9 @@
       "chemistry": " Chemistry",
       "physics": " Physics",
       "advmaths": " Advanced Mathematics",
-      "bookkeeping_accounts": " Bookkeeping and Accounts"
+      "bookkeeping_accounts": " Bookkeeping and Accounts",
+      "graphic_design": " Graphic Design",
+      "electronics": " Electronics"
     }
   }
 }

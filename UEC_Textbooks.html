@@ -440,6 +440,7 @@
             <label id="history"><input type="checkbox" name="subject" value="history"> History</label><br>
             <label id="geography"><input type="checkbox" name="subject" value="geography"> Geography</label><br>
             <label id="arts"><input type="checkbox" name="subject" value="arts"> Arts</label><br>
+            <label id="artsap"><input type="checkbox" name="subject" value="artsap"> Arts Appreciation</label><br>
             <label id="music"><input type="checkbox" name="subject" value="music"> Music</label><br>
             <label id="it"><input type="checkbox" name="subject" value="it"> </label><br>
             <label id="economics"><input type="checkbox" name="subject" value="economics"> Economics</label><br>
@@ -449,7 +450,9 @@
             <label id="chemistry"><input type="checkbox" name="subject" value="chemistry"> Chemistry</label><br>
             <label id="physics"><input type="checkbox" name="subject" value="physics"> Physics</label><br>
             <label id="advmaths"><input type="checkbox" name="subject" value="advmaths"> Advanced Mathematics</label><br>
-            <label id="bookkeeping_accounts"><input type="checkbox" name="subject" value="bookkeeping_accounts"> bookkeeping</label><br>
+            <label id="bookkeeping_accounts"><input type="checkbox" name="subject" value="bookkeeping_accounts"> Bookkeeping</label><br>
+            <label id="graphic_design"><input type="checkbox" name="subject" value="graphic_design"> Graphic Design</label><br>
+            <label id="electronics"><input type="checkbox" name="subject" value="electronics"> Electronics</label><br>
         </div>
     </div>
     <div id="last-updated">請稍等 ... Sila bersabar ... Please wait a moment ...</div>
@@ -705,6 +708,7 @@
             document.getElementById('history').childNodes[1].textContent = content.subject.history;
             document.getElementById('geography').childNodes[1].textContent = content.subject.geography;
             document.getElementById('arts').childNodes[1].textContent = content.subject.arts;
+            document.getElementById('artsap').childNodes[1].textContent = content.subject.artsap;
             document.getElementById('music').childNodes[1].textContent = content.subject.music;
             document.getElementById('it').childNodes[1].textContent = content.subject.it;
             document.getElementById('economics').childNodes[1].textContent = content.subject.economics;
@@ -715,6 +719,8 @@
             document.getElementById('physics').childNodes[1].textContent = content.subject.physics;
             document.getElementById('advmaths').childNodes[1].textContent = content.subject.advmaths;
             document.getElementById('bookkeeping_accounts').childNodes[1].textContent = content.subject.bookkeeping_accounts; 
+            document.getElementById('graphic_design').childNodes[1].textContent = content.subject.graphic_design; 
+            document.getElementById('electronics').childNodes[1].textContent = content.subject.electronics; 
 
             loadBooks(language, content);
         }
@@ -865,11 +871,27 @@
             forEach(checkbox => {
                 checkbox.checked = true;
             });
-            lastUpdated = await (await fetch(
-            'https://api.github.com/repos/IndependentHighSchoolsLive/IndependentHighSchoolsLive.github.io/commits?path=textbooks_page_data/books_data.json&per_page=1'
-            )).json();
-            lastUpdated = new Date(lastUpdated[0].commit.committer.date);
-            lastUpdated = lastUpdated.toLocaleDateString("en-GB");
+            try {
+                const response = await fetch('https://api.github.com/repos/IndependentHighSchoolsLive/IndependentHighSchoolsLive.github.io/commits?path=textbooks_page_data/books_data.json&per_page=1');
+                
+                if (!response.ok) { throw new Error(`Commit JSON cannot load: ${response.status}`); }
+
+                const data = await response.json();
+                
+                if (data && data.length > 0 && data[0].commit && data[0].commit.committer) {
+                    lastUpdated = data[0].commit.committer.date; 
+                } else {
+                    lastUpdated = null;
+                }
+            } catch (error) {
+                console.error("Failed to fetch commit data:", error);
+                lastUpdated = null;
+            }
+            if (lastUpdated == null) lastUpdated = "25/06/2026 (HTML)" 
+            else {
+                lastUpdated = new Date(lastUpdated[0].commit.committer.date);
+                lastUpdated = lastUpdated.toLocaleDateString("en-GB");
+            }
             loadPageWithLanguage(page_language);
         });
     </script>

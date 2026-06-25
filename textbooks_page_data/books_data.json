@@ -914,7 +914,21 @@
         "subject": "history",
         "page": 413,
         "size": 253219703,
+        "status": "superseded",
         "dl_link": "https://media.githubusercontent.com/media/IndependentHighSchoolsLive/Large-Unified-Examination-Certificate-Study-Materials-Storage/refs/heads/main/sm_his_msia_sea_2017.pdf"
+      },
+      {
+        "id": "sm_his_msia_sea_2025",
+        "title": {
+          "zh": "高中《馬來西亞及其東南亞鄰國史》（修訂版）",
+          "zh-simp": "高中《马来西亚及其东南亚邻国史》（修订版）",
+          "en-gb": "History of Malaysia & Neighbouring South-East Asia Nations (Senior Middle Textbook) (Revised Edition)",
+          "ms-my": "Sejarah Malaysia & Jiran-jiran Asia Tenggaranya (Menengah Tinggi) (Edisi Semakan)"
+        },
+        "subject": "history",
+        "page": 403,
+        "size": 230943682,
+        "dl_link": "https://media.githubusercontent.com/media/IndependentHighSchoolsLive/Large-Unified-Examination-Certificate-Study-Materials-Storage/refs/heads/main/sm_his_msia_sea_2025.pdf"
       },
       {
         "id": "sm_his_world_1995",
@@ -975,7 +989,7 @@
           "en-gb": "Arts Appreciation Volume 1",
           "ms-my": "Apresiasi Seni Visual Jilid 1"
         },
-        "subject": "arts",
+        "subject": "artsap",
         "page": 357,
         "size": 128191188,
         "dl_link": "https://media.githubusercontent.com/media/IndependentHighSchoolsLive/Large-Unified-Examination-Certificate-Study-Materials-Storage/refs/heads/main/sm1_artsap_2020.pdf"
@@ -1004,6 +1018,7 @@
         "subject": "bookkeeping_accounts",
         "page": 235,
         "size": 55712669,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_bk_acc_ref_1_2014.pdf"
       },
       {
@@ -1072,6 +1087,19 @@
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_chineseB_2012.pdf"
       },
       {
+        "id": "sm1_electronics_2025",
+        "title": {
+          "zh": "高中《電子學》第一冊",
+          "zh-simp": "高中《电子学》第一册",
+          "en-gb": "S.M. Electronics Volume 1",
+          "ms-my": "Elektronik Menengah Tinggi Jilid 1"
+        },
+        "subject": "electronics",
+        "page": 206,
+        "size": 5989579,
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_electronics_2025.pdf"
+      },
+      {
         "id": "sm1_english_2021",
         "title": {
           "zh": "高一《英文》",
@@ -1083,6 +1111,19 @@
         "page": 155,
         "size": 41806111,
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_english_2021.pdf"
+      },
+      {
+        "id": "sm1_graphic_design_2025",
+        "title": {
+          "zh": "高中《平面設計》第一冊",
+          "zh-simp": "高中《平面设计》第一册",
+          "en-gb": "S.M. Graphic Design Volume 1",
+          "ms-my": "Reka Bentuk Grafik Menengah Tinggi Jilid 1"
+        },
+        "subject": "graphic_design",
+        "page": 178,
+        "size": 98026404,
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_graphic_design_2025.pdf"
       },
       {
         "id": "sm1_it_2024",
@@ -1173,6 +1214,7 @@
         "subject": "advmaths",
         "page": 359,
         "size": 58492511,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_advmathsA_1994.pdf"
       },
       {
@@ -1186,6 +1228,7 @@
         "subject": "advmaths",
         "page": 207,
         "size": 34803917,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm1_advmathsB_1995.pdf"
       },
       {
@@ -1259,7 +1302,7 @@
           "en-gb": "Arts Appreciation Volume 2",
           "ms-my": "Apresiasi Seni Visual Jilid 2"
         },
-        "subject": "arts",
+        "subject": "artsap",
         "page": 430,
         "size": 146241308,
         "dl_link": "https://media.githubusercontent.com/media/IndependentHighSchoolsLive/Large-Unified-Examination-Certificate-Study-Materials-Storage/refs/heads/main/sm2_artsap_2021.pdf"
@@ -1288,6 +1331,7 @@
         "subject": "bookkeeping_accounts",
         "page": 258,
         "size": 100529294,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm2_bk_acc_ref_2_2015.pdf"
       },
       {
@@ -1445,6 +1489,7 @@
         "subject": "advmaths",
         "page": 286,
         "size": 70065763,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm2_advmathsA_1995.pdf"
       },
       {
@@ -1458,6 +1503,7 @@
         "subject": "advmaths",
         "page": 239,
         "size": 54230758,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm2_advmathsB_1996.pdf"
       },
       {
@@ -1531,9 +1577,10 @@
           "en-gb": "Arts Appreciation Volume 3",
           "ms-my": "Apresiasi Seni Visual Jilid 3"
         },
-        "subject": "arts",
-        "page": 0,
-        "size": 0
+        "subject": "artsap",
+        "page": 238,
+        "size": 81922180,
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm3_artsap_2022.pdf"
       },
       {
         "id": "sm3_biology_2019",
@@ -1559,6 +1606,7 @@
         "subject": "bookkeeping_accounts",
         "page": 233,
         "size": 83398654,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm3_bk_acc_ref_3_2015.pdf"
       },
       {
@@ -1703,6 +1751,7 @@
         "subject": "advmaths",
         "page": 203,
         "size": 51057190,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm3_advmathsA_199x.pdf"
       },
       {
@@ -1716,6 +1765,7 @@
         "subject": "advmaths",
         "page": 99,
         "size": 25666493,
+        "status": "superseded",
         "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm3_advmathsB_199x.pdf"
       },
             {
@@ -1740,9 +1790,9 @@
           "ms-my": "Matematik Lanjutan Menengah Tinggi Tiga Jilid 2"
         },
         "subject": "advmaths",
-        "page": 0,
-        "size": 0,
-        "dl_link": ""
+        "page": 170,
+        "size": 45277074,
+        "dl_link": "https://raw.githubusercontent.com/IndependentHighSchoolsLive/Unified-Examination-Certificate-Study-Materials-Storage/main/books/sm3_advmathsB_2025.pdf"
       },
       {
         "id": "sm3_physics_2020",
