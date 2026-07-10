@@ -11,6 +11,10 @@
         "UEC_Trial_Papers": {
             "title": "預試試卷",
             "link": "UEC_Trial_Papers.html"
+        },
+        "Dailies": {
+            "title": "➦ 每日份學習",
+            "link": "https://chkllive.github.io/Everyday-Study"
         }
     },
     "zh-simp": {
@@ -25,6 +29,10 @@
         "UEC_Trial_Papers": {
             "title": "预试试卷",
             "link": "UEC_Trial_Papers.html"
+        },
+        "Dailies": {
+            "title": "➦ 每日份学习",
+            "link": "https://chkllive.github.io/Everyday-Study"
         }
     },
     "ms-my": {
@@ -39,6 +47,10 @@
         "UEC_Trial_Papers": {
             "title": "Kertas Ujian Percubaan UEC",
             "link": "UEC_Trial_Papers.html"
+        },
+        "Dailies": {
+            "title": "➦ Pembelajaran Harian",
+            "link": "https://chkllive.github.io/Everyday-Study"
         }
     },
     "en-gb": {
@@ -53,6 +65,10 @@
         "UEC_Trial_Papers": {
             "title": "UEC Trial Papers",
             "link": "UEC_Trial_Papers.html"
+        },
+        "Dailies": {
+            "title": "➦ Daily Study",
+            "link": "https://chkllive.github.io/Everyday-Study"
         }
     }
 }
