@@ -889,7 +889,7 @@
             }
             if (lastUpdated == null) lastUpdated = "25/06/2026 (HTML)" 
             else {
-                lastUpdated = new Date(lastUpdated[0].commit.committer.date);
+                lastUpdated = new Date(lastUpdated);
                 lastUpdated = lastUpdated.toLocaleDateString("en-GB");
             }
             loadPageWithLanguage(page_language);
