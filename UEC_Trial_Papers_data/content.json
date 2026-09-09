@@ -11,7 +11,8 @@
     "sm": "高中",
     "v": "技術科",
     "toUpload": "上傳考卷",
-    "toDownload": "下載考卷",
+    "toDownload": "下載考卷 (2025)",
+    "toDownload2026": "下載考卷 (2026)",
     "school": "學校",
     "downloadLink": "Download Link"
   },
@@ -27,7 +28,8 @@
     "sm": "高中",
     "v": "技术科",
     "toUpload": "上传考卷",
-    "toDownload": "下载考卷",
+    "toDownload": "下载考卷 (2025)",
+    "toDownload2026": "下载考卷 (2026)",
     "school": "学校",
     "downloadLink": "Download Link"
   },
@@ -43,7 +45,8 @@
     "sm": "Menengah Atas",
     "v": "Vokasional",
     "toUpload": "Muat Naik<br>Kertas Soalan",
-    "toDownload": "Muat Turun<br>Kertas Soalan",
+    "toDownload": "Muat Turun<br>Kertas Soalan (2025)",
+    "toDownload2026": "Muat Turun<br>Kertas Soalan (2026)",
     "school": "Sekolah",
     "downloadLink": "Download Link"
   },
@@ -59,7 +62,8 @@
     "sm": "Senior Middle",
     "v": "Vocational",
     "toUpload": "Upload<br>Exam Papers",
-    "toDownload": "Download<br>Exam Papers",
+    "toDownload": "Download<br>Exam Papers (2025)",
+    "toDownload2026": "Download<br>Exam Papers (2026)",
     "school": "School",
     "downloadLink": "Download Link"
   }
