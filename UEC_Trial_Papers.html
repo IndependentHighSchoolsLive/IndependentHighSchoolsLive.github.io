@@ -330,11 +330,15 @@
             <img class="to-upload-icon" alt="Upload" width="113px" height="113px">
             <span id="to-upload-text"></span>
         </a>
-        <a id="to-download-a" class="up-download-button" onclick="actionOption('download')">
+        <a id="to-download-2024" class="up-download-button" onclick="actionOption('download', 2024)">
+            <img class="to-download-icon" alt="Download" width="113px" height="113px">
+            <span id="to-download-text-2024"></span>
+        </a>
+        <a id="to-download-a" class="up-download-button" onclick="actionOption('download', 2025)">
             <img class="to-download-icon" alt="Download" width="113px" height="113px">
             <span id="to-download-text"></span>
         </a>
-        <a id="to-download-2026" class="up-download-button" onclick="actionOption('download-2026')">
+        <a id="to-download-2026" class="up-download-button" onclick="actionOption('download', 2026)">
             <img class="to-download-icon" alt="Download" width="113px" height="113px">
             <span id="to-download-text-2026"></span>
         </a>
@@ -411,11 +415,6 @@
 
             </tbody>
         </table>
-    </div>
-    <div id="download-2026" style="visibility: hidden; display: none;">
-        <button class="reselect-btn" onclick="backToSelection()"><img class="back-button-icon" alt="Back" width="23px" height="23px"></button>
-        <br><br>
-        Sedang disediakan... Preparing... 準備中... <br><br>(To be ready on 10th September)
     </div>
     <script>
         let contentJSON = {};
@@ -558,6 +557,7 @@
             document.querySelectorAll('.senior-middle-vocational-title').forEach(title => title.textContent = content.v);
             document.getElementById('to-upload-text').innerHTML = content.toUpload;
             document.getElementById('to-download-text').innerHTML = content.toDownload;
+            document.getElementById('to-download-text-2024').innerHTML = content.toDownload2024;
             document.getElementById('to-download-text-2026').innerHTML = content.toDownload2026;
             loadContents(language, content);
             positionOfReselectBtn();
@@ -568,13 +568,14 @@
                 examPapers.forEach(paperFile => {
                     if (!paperFile) return;
                     const tr = document.createElement('tr');
-                    let exampapersinfo = paperFile.split('_');
+                    let exampapersinfo = paperFile.replace('[Unknown_school]', 'UnknownSchool').split('_');
 
                     let convertedLanguageCode
                     if (language == "zh") convertedLanguageCode = "BC";
                     else if (language == "zh-simp") convertedLanguageCode = "BC_Simplified";
                     else convertedLanguageCode = "BM";
-                    const schoolName = schoolsJSON[exampapersinfo[0]][convertedLanguageCode];
+                    let schoolName = { "zh": "未知學校", "zh-simp": "未知学校", "ms-my": "Sekolah Tidak Diketahui", "en-gb": "Unknown School" }[language] + ` ${exampapersinfo[0].replace('UnknownSchool', '')}`;
+                    if (schoolsJSON[exampapersinfo[0]]) schoolName = schoolsJSON[exampapersinfo[0]][convertedLanguageCode];
 
                     exampaperSubjectCode = exampapersinfo[1].split('-');
                     const subjectName = subjectJSON[exampaperSubjectCode[0]][language];
@@ -597,7 +598,7 @@
                         else if (language == "zh") paper += ` 答案`;
                         else if (language == "zh-simp") paper += ` 答案`;
                     }
-                    const link = `https://raw.githubusercontent.com/IndependentHighSchoolsLive/Examination-Papers/main/Files/${paperFile}.pdf`;
+                    const link = `https://raw.githubusercontent.com/IndependentHighSchoolsLive/Examination-Papers/main/Files/${paperFile.endsWith('.xlsx') ? paperFile : paperFile + '.pdf'}`;
                     const downloadIcon = mode === "dark" ? "download-dark.svg" : "download-light.svg";
                     tr.innerHTML = `
                         <th>${subjectName+paper}</th>
@@ -675,25 +676,23 @@
             document.getElementById("up-download-div").style.display = "flex";
         }
 
-        function actionOption(action) {
+        async function actionOption(action, year) {
             if (action === "download") {
+                exampapersJSON = await (await fetch(`./UEC_Trial_Papers_data/${year}_UEC_Trials.json`)).json();
+                Object.keys(tableOrder).forEach(key => tableOrder[key] = 0);
+                loadPageWithLanguage(page_language);
+                sortTable(0);
+                sortTable(2);
+                sortTable(4);
                 document.getElementById("download").style.display = "";
                 document.getElementById("download").style.visibility = "visible";
                 document.getElementById("upload").style.display = "none";
                 document.getElementById("up-download-div").style.display = "none";
-                document.getElementById("download-2026").style.display = "none";
             } else if (action === "upload") {
                 document.getElementById("upload").style.display = "block";
                 document.getElementById("upload").style.visibility = "visible";
                 document.getElementById("download").style.display = "none";
                 document.getElementById("up-download-div").style.display = "none";
-                document.getElementById("download-2026").style.display = "none";
-            } else if (action === "download-2026") {
-                document.getElementById("download-2026").style.display = "";
-                document.getElementById("download-2026").style.visibility = "visible";
-                document.getElementById("upload").style.display = "none";
-                document.getElementById("up-download-div").style.display = "none";
-                document.getElementById("download").style.display = "none";
             }
         }
 
