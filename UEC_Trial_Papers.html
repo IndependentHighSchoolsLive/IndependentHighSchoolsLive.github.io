@@ -568,13 +568,14 @@
                 examPapers.forEach(paperFile => {
                     if (!paperFile) return;
                     const tr = document.createElement('tr');
-                    let exampapersinfo = paperFile.replace('[Unknown_school]', 'UnknownSchool').split('_');
+                    const schoolCodeEnd = paperFile.search(/_[A-Z]{2}\d{2}/);
+                    let exampapersinfo = [paperFile.slice(0, schoolCodeEnd), ...paperFile.slice(schoolCodeEnd + 1).split('_')];
 
                     let convertedLanguageCode
                     if (language == "zh") convertedLanguageCode = "BC";
                     else if (language == "zh-simp") convertedLanguageCode = "BC_Simplified";
                     else convertedLanguageCode = "BM";
-                    let schoolName = { "zh": "未知學校", "zh-simp": "未知学校", "ms-my": "Sekolah Tidak Diketahui", "en-gb": "Unknown School" }[language] + ` ${exampapersinfo[0].replace('UnknownSchool', '')}`;
+                    let schoolName = { "zh": "未知學校", "zh-simp": "未知学校", "ms-my": "Sekolah Tidak Diketahui", "en-gb": "Unknown School" }[language] + ` ${exampapersinfo[0].replace('[Unknown_school]', '')}`;
                     if (schoolsJSON[exampapersinfo[0]]) schoolName = schoolsJSON[exampapersinfo[0]][convertedLanguageCode];
 
                     exampaperSubjectCode = exampapersinfo[1].split('-');
