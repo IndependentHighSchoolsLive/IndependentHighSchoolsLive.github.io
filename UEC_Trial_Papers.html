@@ -587,6 +587,13 @@
                         else if (language == "zh") paper = ` 試卷 ${exampaperSubjectCode[1]}`;
                         else if (language == "zh-simp") paper = ` 试卷 ${exampaperSubjectCode[1]}`;
                     }
+                    if (exampaperSubjectCode[0] == "JY06" && exampaperSubjectCode.length > 2) {
+                        const partNames = {
+                            "1": { "ms-my": "Soalan objektif", "en-gb": "Multiple choice questions", "zh": "選擇題", "zh-simp": "选择题" },
+                            "2": { "ms-my": "Soalan subjektif", "en-gb": "Subjective questions", "zh": "作答題", "zh-simp": "作答题" }
+                        };
+                        paper += ` (${partNames[exampaperSubjectCode[2]][language]})`;
+                    }
                     if (exampapersinfo[3].includes('A')) {
                         if (exampapersinfo[3].includes('Q')) {
                             if (language == "ms-my") paper += ` dengan Jawapan`;
