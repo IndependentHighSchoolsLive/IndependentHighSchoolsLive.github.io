@@ -686,7 +686,7 @@
 
         async function actionOption(action, year) {
             if (action === "download") {
-                exampapersJSON = await (await fetch(`./UEC_Trial_Papers_data/${year}_UEC_Trials.json`)).json();
+                exampapersJSON = await (await fetch(`./UEC_Trial_Papers_data/${year}_UEC_Trials.json`, {cache: "no-cache"})).json();
                 Object.keys(tableOrder).forEach(key => tableOrder[key] = 0);
                 loadPageWithLanguage(page_language);
                 sortTable(0);
